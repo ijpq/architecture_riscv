@@ -1,0 +1,6 @@
+[submodule "chipyard"]
+	path = chipyard
+	url = git@github.com:ijpq/mychipyard.git
+[submodule "cs152-chipyard"]
+	path = cs152-chipyard
+	url = git@github.com:ijpq/mycs152-chipyard.git
