@@ -1,3 +1,99 @@
+# from scratch
+
+according to https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf
+it contains a step which requires conda activate a dir of .conda-env , which is generated from release chipyard setup steps of docs. SO, you should setup the environment of chipyard release build firstly. while setup the env of release build(https://chipyard.readthedocs.io/en/stable/Chipyard-Basics/Initial-Repo-Setup.html#), **even if it would failed because submodule guestmount not found**, the dir `.conda-env` would generated also. therefore, once you found the .conda-env generated, you can go on the cs152 lab1.pdf.
+after the the .conda-env successfuly generated from chipyard release build. you can go on the https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf steps.
+you would encounter the java error like following, while running the command `./build-setup.sh riscv-tools`:
+```
+java.lang.ClassCastException: class java.lang.UnsupportedOperationException cannot be cast to class xsbti.FullReload (java.lang.UnsupportedOperationException is in module java.base of loader 'bootstrap'; xsbti.FullReload is in unnamed module of loader 'app')
+	at sbt.internal.XMainConfiguration.run(XMainConfiguration.java:59)
+	at sbt.xMain.run(Main.scala:46)
+	at xsbt.boot.Launch$$anonfun$run$1.apply(Launch.scala:109)
+	at xsbt.boot.Launch$.withContextLoader(Launch.scala:128)
+	at xsbt.boot.Launch$.run(Launch.scala:109)
+	at xsbt.boot.Launch$$anonfun$apply$1.apply(Launch.scala:35)
+	at xsbt.boot.Launch$.launch(Launch.scala:117)
+	at xsbt.boot.Launch$.apply(Launch.scala:18)
+	at xsbt.boot.Boot$.runImpl(Boot.scala:41)
+	at xsbt.boot.Boot$.main(Boot.scala:17)
+	at xsbt.boot.Boot.main(Boot.scala)
+Error during sbt execution: java.lang.ClassCastException: class java.lang.UnsupportedOperationException cannot be cast to class xsbti.FullReload (java.lang.UnsupportedOperationException is in module java.base of loader 'bootstrap'; xsbti.FullReload is in unnamed module of loader 'app')
+```
+this error is caused because jdk20 compability error with stb lib.
+you should install jdk11 and rename the java from conda to .java, in order to use the system installed jdk11.
+after that, coninue to `./build-step.sh riscv-tools` step of https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf
+
+you should see this msg in shell:
+```
+/data/tangke/chipyard-cs152-sp23
+/data/tangke/chipyard-cs152-sp23/generators/constellation /data/tangke/chipyard-cs152-sp23
+Cleared directory 'espresso'
+Submodule 'espresso' (https://github.com/chipsalliance/espresso.git) unregistered for path 'espresso'
+/data/tangke/chipyard-cs152-sp23
+/data/tangke/chipyard-cs152-sp23/tools/api-config-chipsalliance /data/tangke/chipyard-cs152-sp23
+/data/tangke/chipyard-cs152-sp23
+/data/tangke/chipyard-cs152-sp23/generators/cva6/src/main/resources/vsrc /data/tangke/chipyard-cs152-sp23
+Cleared directory 'cva6'
+Submodule 'src/main/resources/vsrc/cva6' (https://github.com/openhwgroup/cva6.git) unregistered for path 'cva6'
+/data/tangke/chipyard-cs152-sp23
+Setup complete!
+```
+
+the lab1.pdf later requires you execute this commands:
+```
+eecs$ CHIPYARDROOT=$PWD
+eecs$ BMARKS=$CHIPYARDROOT/generators/riscv-sodor/riscv-bmarks
+eecs$ SCRIPTS=$CHIPYARDROOT/generators/riscv-sodor/scripts
+eecs$ source ./env.sh
+```
+you have to pay attention to content of env.sh as above, such as modify the path of your local path, rather a ucb official server.
+
+then, you should execute a make command to simulate a non pipeline processor.
+
+you would encounter this error:
+```
+%Warning-WIDTHEXPAND: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/AsyncQueueSink_3.sv:157:28: Operator XOR expects 32 or 6 bits on the LHS, but LHS's SEL generates 3 bits.
+                                                                                                                                                                    : ... In instance TestHarness.bits_in_queue.sink
+  157 |     .io_d  (_GEN[ridx[2:0] ^ {ridx[3], 2'h0}]),  
+      |                            ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.008
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-WIDTHEXPAND: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/AsyncQueueSink_3.sv:157:28: Operator XOR expects 32 or 6 bits on the RHS, but RHS's REPLICATE generates 3 bits.
+                                                                                                                                                                    : ... In instance TestHarness.bits_in_queue.sink
+  157 |     .io_d  (_GEN[ridx[2:0] ^ {ridx[3], 2'h0}]),  
+      |                            ^
+%Error-NEEDTIMINGOPT: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:43:17: Use --timing or --no-timing to specify how delays should be handled
+                                                                                                                                                         : ... In instance TestHarness.SimJTAG
+   43 |    wire         #0.1 __jtag_TDO = jtag_TDO_driven ? 
+      |                 ^
+%Error-NEEDTIMINGOPT: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:54:11: Use --timing or --no-timing to specify how timing controls should be handled
+                                                                                                                                                         : ... In instance TestHarness.SimJTAG
+   54 |    assign #0.1 jtag_TCK   = __jtag_TCK;
+      |           ^
+%Error-NEEDTIMINGOPT: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:55:11: Use --timing or --no-timing to specify how timing controls should be handled
+                                                                                                                                                         : ... In instance TestHarness.SimJTAG
+   55 |    assign #0.1 jtag_TMS   = __jtag_TMS;
+      |           ^
+%Error-NEEDTIMINGOPT: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:56:11: Use --timing or --no-timing to specify how timing controls should be handled
+                                                                                                                                                         : ... In instance TestHarness.SimJTAG
+   56 |    assign #0.1 jtag_TDI   = __jtag_TDI;
+      |           ^
+%Error-NEEDTIMINGOPT: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:57:11: Use --timing or --no-timing to specify how timing controls should be handled
+                                                                                                                                                         : ... In instance TestHarness.SimJTAG
+   57 |    assign #0.1 jtag_TRSTn = __jtag_TRSTn;
+      |           ^
+%Error-NEEDTIMINGOPT: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:59:11: Use --timing or --no-timing to specify how timing controls should be handled
+                                                                                                                                                         : ... In instance TestHarness.SimJTAG
+   59 |    assign #0.1 exit = __exit;
+      |           ^
+%Error: Exiting due to 6 error(s)
+```
+
+you should turn to this following content in chinese.
+
+
+
+
 # 如何配置lab1环境
 将开源的chipyard clone(https://github.com/ucb-bar/chipyard)下来，里面会有一个.conda_env
 如果命令中遇到任何需要activate .conda-env的，都可以activate 这个.conda-env
