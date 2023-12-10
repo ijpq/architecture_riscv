@@ -1,4 +1,4 @@
-# from scratch
+# FROM SCRATCH
 
 according to https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf
 
@@ -14,12 +14,22 @@ after the the .conda-env successfuly generated from chipyard release build, keep
 
 **TO SUMMARIZE, using the release version of chipyard generates .conda_env , activate this conda environment, then go to lab version of chipyard to execute simulation and others**
 
-
-
-ENV SETUP TIPS
-----------------
-
+## FOR EXAMPLE
+you should starting the lab like this, the shell prompt notice whether you have activate the conda env
+```bash
+(/home/tangke/cs152/chipyard/.conda-env) tangke@tangke:~/cs152/chipyard-cs152-sp23/sims/verilator$  make CONFIG=Sodor1StageConfig run-binary BINARY=${BMARKS}/towers.riscv
+Running with RISCV=/home/tangke/cs152/chipyard/.conda-env/riscv-tools
+(set -o pipefail &&  /home/tangke/cs152/chipyard-cs152-sp23/sims/verilator/simulator-chipyard-Sodor1StageConfig +permissive +dramsim +dramsim_ini_dir=/home/tangke/cs152/chipyard-cs152-sp23/generators/testchipip/src/main/resources/dramsim2_ini +max-cycles=10000000   +verbose +permissive-off /home/tangke/cs152/chipyard-cs152-sp23/generators/riscv-sodor/riscv-bmarks/towers.riscv </dev/null 2> >(spike-dasm > /home/tangke/cs152/chipyard-cs152-sp23/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/towers.out) | tee /home/tangke/cs152/chipyard-cs152-sp23/sims/verilator/output/chipyard.TestHarness.Sodor1StageConfig/towers.log)
+mcycle = 6166
+minstret = 6172
+[UART] UART0 is here (stdin/stdout).
+(/home/tangke/cs152/chipyard/.conda-env) tangke@tangke:~/cs152/chipyard-cs152-sp23/sims/verilator$
 ```
+
+# ENV SETUP TIPS
+
+
+
 you would encounter the java error like following, while running the command `./build-setup.sh riscv-tools`:
 ```
 java.lang.ClassCastException: class java.lang.UnsupportedOperationException cannot be cast to class xsbti.FullReload (java.lang.UnsupportedOperationException is in module java.base of loader 'bootstrap'; xsbti.FullReload is in unnamed module of loader 'app')
@@ -111,7 +121,7 @@ you should turn to this following content in chinese.
 
 
 
-# 如何配置lab1环境
+# 如何配置lab1环境 - ARCHIVED
 将开源的chipyard clone(https://github.com/ucb-bar/chipyard)下来，里面会有一个.conda_env
 如果命令中遇到任何需要activate .conda-env的，都可以activate 这个.conda-env
 lab文档中可能一些脚本会写死到一个官方教学机器目录上，本地上就按照自己的目录结构改一下
