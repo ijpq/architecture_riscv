@@ -1,8 +1,25 @@
 # from scratch
 
 according to https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf
-it contains a step which requires conda activate a dir of .conda-env , which is generated from release chipyard setup steps of docs. SO, you should setup the environment of chipyard release build firstly. while setup the env of release build(https://chipyard.readthedocs.io/en/stable/Chipyard-Basics/Initial-Repo-Setup.html#), **even if it would failed because submodule guestmount not found**, the dir `.conda-env` would generated also. therefore, once you found the .conda-env generated, you can go on the cs152 lab1.pdf.
-after the the .conda-env successfuly generated from chipyard release build. you can go on the https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf steps.
+
+it contains a step which requires conda activate a dir of .conda-env , but which is generated from release chipyard setup steps of docs, because we haven't the course environment.
+
+SO, you should setup the environment of chipyard release build firstly.
+
+while setup the env of release build(https://chipyard.readthedocs.io/en/stable/Chipyard-Basics/Initial-Repo-Setup.html#), **even if it would failed because submodule guestmount not found**, the dir `.conda-env` would generated also. 
+
+therefore, once you found the .conda-env generated, you can go on the cs152 lab1.pdf.
+
+after the the .conda-env successfuly generated from chipyard release build, keep going on the https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf steps.
+
+**TO SUMMARIZE, using the release version of chipyard generates .conda_env , activate this conda environment, then go to lab version of chipyard to execute simulation and others**
+
+
+
+ENV SETUP TIPS
+----------------
+
+```
 you would encounter the java error like following, while running the command `./build-setup.sh riscv-tools`:
 ```
 java.lang.ClassCastException: class java.lang.UnsupportedOperationException cannot be cast to class xsbti.FullReload (java.lang.UnsupportedOperationException is in module java.base of loader 'bootstrap'; xsbti.FullReload is in unnamed module of loader 'app')
@@ -222,5 +239,6 @@ minstret = 6172
 [UART] UART0 is here (stdin/stdout).
 ```
 可以看到这里打印了`mcycle`和`minstret`，所以就完成了环境配置。
+```
 
 **以上内容，根据文档(https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf)进行配置**
