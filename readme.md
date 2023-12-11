@@ -249,10 +249,10 @@ minstret = 6172
 [UART] UART0 is here (stdin/stdout).
 ```
 可以看到这里打印了`mcycle`和`minstret`，所以就完成了环境配置。
-```
 
 
 ![image](https://github.com/ijpq/MyCS152/assets/44460962/7b133e09-82cd-4210-8256-4848c901ab74)
+
 这个no such file的java exception，试着去在实验的chipyard目录中创建一个.java_tmp目录
 
 **以上内容，根据文档(https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf)进行配置**
