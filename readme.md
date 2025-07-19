@@ -1,21 +1,21 @@
 # FROM SCRATCH
 
-according to https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf
+## background
 
-it contains a step which requires conda activate a dir of .conda-env , but which is generated from release chipyard setup steps of docs, because we haven't the course environment.
+> i set the environment from lab1.pdf
+>
+> it has a step indicating `conda activate` one dir named `.conda-env` , but which is generated from release chipyard setup steps of docs, because we don't have the educational environment.
+>
+> so, you should setup the environment of chipyard release build at first
+>
+> when setting the env from release build (https://chipyard.readthedocs.io/en/stable/Chipyard-Basics/Initial-Repo-Setup.html#) , **it might fail because submodule guestmount not found**, the needed dir `.conda-env` has generated , though.
+>
+> after the `.conda-env` successfuly generated from chipyard release build, converts to steps in (https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf) .
 
-SO, you should setup the environment of chipyard release build firstly.
+**TO SUMMARIZE, using the release version of chipyard generates .conda_env , activate this conda environment, then go to lab version of chipyard to execute simulation and remains**
 
-while setup the env of release build(https://chipyard.readthedocs.io/en/stable/Chipyard-Basics/Initial-Repo-Setup.html#), **even if it would failed because submodule guestmount not found**, the dir `.conda-env` would generated also. 
+use `make CONFIG=Sodor1StageConfig run-binary BINARY=${BMARKS}/towers.riscv` to test if env has been settled, the correct output like this:
 
-therefore, once you found the .conda-env generated, you can go on the cs152 lab1.pdf.
-
-after the the .conda-env successfuly generated from chipyard release build, keep going on the https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf steps.
-
-**TO SUMMARIZE, using the release version of chipyard generates .conda_env , activate this conda environment, then go to lab version of chipyard to execute simulation and others**
-
-## FOR EXAMPLE
-you should starting the lab like this, the shell prompt notice whether you have activate the conda env
 ```bash
 (/home/tangke/cs152/chipyard/.conda-env) tangke@tangke:~/cs152/chipyard-cs152-sp23/sims/verilator$  make CONFIG=Sodor1StageConfig run-binary BINARY=${BMARKS}/towers.riscv
 Running with RISCV=/home/tangke/cs152/chipyard/.conda-env/riscv-tools
@@ -26,11 +26,23 @@ minstret = 6172
 (/home/tangke/cs152/chipyard/.conda-env) tangke@tangke:~/cs152/chipyard-cs152-sp23/sims/verilator$
 ```
 
+# WHAT SHOULD YOU DO EACH TIME
+
+confirm the environment has been settled, then, do following steps:
+
+```bash
+conda activate chipyard/.conda-env/ # activate the env from release build chipyard
+cd to $EDU_CHIPYARD # cd to educational chipyard dir
+CHIPYARDROOT=$PWD
+BMARKS=$CHIPYARDROOT/generators/riscv-sodor/riscv-bmarks
+SCRIPTS=$CHIPYARDROOT/generators/riscv-sodor/scripts
+source ./env.sh
+```
+
 # ENV SETUP TIPS
 
-
-
 you would encounter the java error like following, while running the command `./build-setup.sh riscv-tools`:
+
 ```
 java.lang.ClassCastException: class java.lang.UnsupportedOperationException cannot be cast to class xsbti.FullReload (java.lang.UnsupportedOperationException is in module java.base of loader 'bootstrap'; xsbti.FullReload is in unnamed module of loader 'app')
 	at sbt.internal.XMainConfiguration.run(XMainConfiguration.java:59)
@@ -46,11 +58,13 @@ java.lang.ClassCastException: class java.lang.UnsupportedOperationException cann
 	at xsbt.boot.Boot.main(Boot.scala)
 Error during sbt execution: java.lang.ClassCastException: class java.lang.UnsupportedOperationException cannot be cast to class xsbti.FullReload (java.lang.UnsupportedOperationException is in module java.base of loader 'bootstrap'; xsbti.FullReload is in unnamed module of loader 'app')
 ```
+
 this error is caused because jdk20 compability error with stb lib.
 you should install jdk11 and rename the java from conda to .java, in order to use the system installed jdk11.
 after that, coninue to `./build-step.sh riscv-tools` step of https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf
 
 you should see this msg in shell:
+
 ```
 /data/tangke/chipyard-cs152-sp23
 /data/tangke/chipyard-cs152-sp23/generators/constellation /data/tangke/chipyard-cs152-sp23
@@ -67,17 +81,20 @@ Setup complete!
 ```
 
 the lab1.pdf later requires you execute this commands:
+
 ```
 eecs$ CHIPYARDROOT=$PWD
 eecs$ BMARKS=$CHIPYARDROOT/generators/riscv-sodor/riscv-bmarks
 eecs$ SCRIPTS=$CHIPYARDROOT/generators/riscv-sodor/scripts
 eecs$ source ./env.sh
 ```
+
 you have to pay attention to content of env.sh as above, such as modify the path of your local path, rather a ucb official server.
 
 then, you should execute a make command to simulate a non pipeline processor.
 
 you would encounter this error:
+
 ```
 %Warning-WIDTHEXPAND: /data/tangke/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/AsyncQueueSink_3.sv:157:28: Operator XOR expects 32 or 6 bits on the LHS, but LHS's SEL generates 3 bits.
                                                                                                                                                                     : ... In instance TestHarness.bits_in_queue.sink
@@ -118,10 +135,10 @@ you would encounter this error:
 
 you should turn to this following content in chinese.
 
-
-
+<details>
 
 # 如何配置lab1环境 - ARCHIVED
+
 将开源的chipyard clone(https://github.com/ucb-bar/chipyard)下来，里面会有一个.conda_env
 如果命令中遇到任何需要activate .conda-env的，都可以activate 这个.conda-env
 lab文档中可能一些脚本会写死到一个官方教学机器目录上，本地上就按照自己的目录结构改一下
@@ -141,7 +158,9 @@ eecs$ cd chipyard-cs152-sp23
 eecs$ git checkout main
 eecs$ ./build-setup.sh riscv-tools
 ```
+
 实验前都是用下面的命令激活环境
+
 ```
 eecs$ CHIPYARDROOT=$PWD
 eecs$ BMARKS=$CHIPYARDROOT/generators/riscv-sodor/riscv-bmarks
@@ -152,11 +171,14 @@ eecs$ source ./env.sh
 可能遇到的第一个问题是stb版本问题，这个conda会装一个jdk20，然后stb编译会有问题，可能是jdk20比较新，还没有修复，所以可以找一下which java, 把这个java改成系统自己安装的java, 我这里是java 11。就可以跑通build-setup.sh riscv-tools
 
 遇到的第二个问题是下面这个命令编译时遇到的
+
 ```
 eecs$ cd ${CHIPYARDROOT}/sims/verilator
 eecs$ make CONFIG=Sodor1StageConfig
 ```
+
 报错如下：我本地是有6个类似如下的error，[error]这个不是错误
+
 ```
 %Error-NEEDTIMINGOPT: /home/tangke/cs152/chipyard-cs152-sp23/sims/verilator/generated-src/chipyard.TestHarness.Sodor1StageConfig/gen-collateral/SimJTAG.v:43:17: Use --timing or --no-timing to specify how delays should be handled
 : ... In instance TestHarness.SimJTAG
@@ -165,7 +187,6 @@ eecs$ make CONFIG=Sodor1StageConfig
 
 gpt说
 
-1.
 ```
 这个错误是由于 Verilator 对于模拟代码中的延迟处理方式的要求。Verilator 是一个高性能的硬件描述语言（HDL）模拟器，它可以将 Verilog 或 SystemVerilog 代码转换成 C++ 或 SystemC 代码。
 
@@ -184,7 +205,6 @@ verilator --no-timing ...
 替换 `...` 为你的其他 Verilator 命令行选项和参数。
 ```
 
-2.
 ```
 你的错误信息和这个GitHub issue链接强相关：[https://github.com/ucb-bar/riscv-mini/issues/31 ↗](https://github.com/ucb-bar/riscv-mini/issues/31)。这个issue的内容提到，当你使用的Verilator版本大于4.016时，你需要在Verilator的命令行中添加 `--max-num-width` 参数来支持非常宽的线（very wide wires）。
 
@@ -202,12 +222,15 @@ MAX_WIDTH_OPTS = $(shell verilator --version | perl -lne 'if (/(\d.\d+)/ && $$1 
 ```
 
 因此，我修改了makefile，因为我环境中的verilog是大于4.016的，所以第一个修改是把--max-num-width改成强制启用了
+
 ```
 # see: https://github.com/ucb-bar/riscv-mini/issues/31
 # MAX_WIDTH_OPTS = $(shell verilator --version | perl -lne 'if (/(\d.\d+)/ && $$1 > 4.016) { print "--max-num-width 1048576"; }')
 MAX_WIDTH_OPTS = --max-num-width 1048576
 ```
+
 第二个修改是，增加了--timing选项
+
 ```
 TIMING_OPTS = --timing
 VERILATOR_NONCC_OPTS = \
@@ -227,11 +250,13 @@ VERILATOR_NONCC_OPTS = \
 
 至此，编译成功。
 make下面的目标来检测输出内容
+
 ```
 make CONFIG=Sodor1StageConfig run-binary BINARY=${BMARKS}/towers.riscv
 ```
 
 输出的结尾如下：
+
 ```
 /home/tangke/cs152/chipyard/.conda-env/bin/x86_64-conda-linux-gnu-c++    SimDRAM.o SimDTM.o SimJTAG.o SimSerial.o SimUART.o emulator.o mm.o mm_dramsim2.o remote_bitbang.o testchip_tsi.o uart.o verilated.o verilated_dpi.o verilated_vpi.o verilated_timing.o verilated_threads.o VTestHarness__ALL.a   -L/home/tangke/cs1
 52/chipyard/.conda-env/riscv-tools/lib -Wl,-rpath,/home/tangke/cs152/chipyard/.conda-env/riscv-tools/lib -L/home/tangke/cs152/chipyard-cs152-sp23/sims/verilator -L/home/tangke/cs152/chipyard-cs152-sp23/tools/DRAMSim2 -lfesvr -ldramsim  -pthread -lpthread -latomic   -o /home/tangke/cs152/chipyard-cs152-sp23/sims/ver
@@ -248,11 +273,13 @@ mcycle = 6166
 minstret = 6172
 [UART] UART0 is here (stdin/stdout).
 ```
-可以看到这里打印了`mcycle`和`minstret`，所以就完成了环境配置。
 
+可以看到这里打印了 `mcycle`和 `minstret`，所以就完成了环境配置。
 
 ![image](https://github.com/ijpq/MyCS152/assets/44460962/7b133e09-82cd-4210-8256-4848c901ab74)
 
 这个no such file的java exception，试着去在实验的chipyard目录中创建一个.java_tmp目录
 
 **以上内容，根据文档(https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf)进行配置**
+
+</details>
