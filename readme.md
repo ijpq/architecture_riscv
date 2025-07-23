@@ -28,7 +28,9 @@ minstret = 6172
 
 # WHAT SHOULD YOU DO EACH TIME
 
-confirm the environment has been settled, then, do following steps:
+just `source local.sh` or 
+
+basically, confirm the environment has been settled, then, do following steps:
 
 ```bash
 conda activate chipyard/.conda-env/ # activate the env from release build chipyard
