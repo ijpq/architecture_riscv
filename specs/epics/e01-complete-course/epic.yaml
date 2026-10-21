@@ -1,6 +1,6 @@
 id: e01
 name: Complete local CS152 learning branch
-status: in_progress
+status: completed
 scope: specs/COURSE_BRANCH_PLAN.md
 stories:
   - id: e01s01

@@ -10,9 +10,9 @@
 |---|---|---|
 | lab1 | `chipyard-cs152-sp23/` | Sodor 与 2023 Chipyard 必要依赖 |
 | lab2 | `edu_cs152/lab2/` | 2022 Lab2 的源码、必要依赖与 HTIF 兼容文件 |
-| lab3 | `edu_cs152/lab3/` | 2021 Lab3 的源码、必要依赖与课程 pk 运行依赖 |
+| lab3 | `edu_cs152/lab3/` | 2022 Lab3 的源码、必要依赖与课程 pk 运行依赖 |
 | lab4-original | `edu_cs152/lab4/` | 保留原练习 / 数据；原版模拟器仍不可用 |
-| lab5 | `edu_cs152/lab5/` | 2022 Lab5 的源码、必要依赖与多 hart 入口支持 |
+| lab5 | `edu_cs152/lab5/` | 2021 版本的 Lab5 源码、必要依赖与本地多 hart 兼容修复 |
 | rv32-reference | `chipyard/toolchains/riscv-tools/riscv-tests/` | Lab1 构建基准所需的 RISC-V tests 源码 |
 
 这些版本有意分开：把所有实验换成同一代 Chipyard 会改变课程接口，不能得到已经验证的环境。

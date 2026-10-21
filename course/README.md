@@ -51,3 +51,7 @@ course/
 scripts/cs152-local/      统一环境、构建、运行、自检入口
 lab4-modern/             现代向量实验与模型合同
 ```
+
+## 交付验收
+
+已在隔离检出中恢复并核对 106 个源码仓库，重新构建和运行四个默认 RTL 配置；详见 [验收报告](../specs/verifications/COURSE_BRANCH_VERIFY.md) 与 [机器可读摘要](../specs/COURSE_BRANCH_STATUS.json)。这些记录说明测试范围，不代替你在新环境中重新构建和运行。

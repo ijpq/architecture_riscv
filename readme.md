@@ -1,3 +1,15 @@
+# CS152 自学分支
+
+**从 [完整课程入口](course/README.md) 开始：讲义、HW1–5、Lab1–5、中文导读和逐步学习路线。**
+
+- 分支：`learn/cs152-complete`。原件来源、缺口和版权见 [资料说明](course/ORIGINS.md)。
+- 新检出按 [源码恢复说明](course/SOURCES.md) 准备，不使用顶层旧私有 Gitlinks 的递归安装入口。
+- 这是跨年份的本地自学整理版；现代 Lab4 的模型限制和缺失原件均已标注，不含作业答案。
+
+以下是早期主要针对 Lab 1 的安装记录，保留作背景参考；不要再按其中的旧 Java 替换步骤重新配置。
+
+---
+
 # FROM SCRATCH
 
 ## background

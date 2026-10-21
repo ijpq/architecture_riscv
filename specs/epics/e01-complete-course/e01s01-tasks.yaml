@@ -1,5 +1,5 @@
 story: e01s01
-status: in_progress
+status: completed
 tasks:
   - id: snapshot-roundtrip
     status: completed
@@ -18,6 +18,6 @@ tasks:
     description: Export all five course source trees and RV32 reference benchmark sources
     verify: python3 course/source_bundle.py check
   - id: isolated-checkout
-    status: in_progress
+    status: completed
     description: Restore committed branch into isolation and verify actual build entry points
     verify: See specs/COURSE_BRANCH_PLAN.md section D and final verification report

@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-21T14:24:38.710112+00:00",
+  "status": "ready_for_self_study_with_modern_lab4",
+  "branch": "learn/cs152-complete",
+  "verified_source_commit": "58822b31abba1c7c1bab26883b98ab004a6f2451",
+  "pushed": false,
+  "materials": {
+    "baseline": "UC Berkeley CS152 Spring 2023; explicitly marked Spring 2021 supplement",
+    "mirror_commit": "454e839289773a2cb8e6c70bcf76c1906e2bac7b",
+    "pdf_count": 56,
+    "sp23_lecture_count": 25,
+    "homeworks": 5,
+    "lab_handouts": 5,
+    "gaps": [
+      {
+        "id": "sp23/L20",
+        "official_title": null,
+        "status": "not present in public mirror",
+        "replacement": "course/notes/20-local-bridge.md"
+      },
+      {
+        "id": "sp23/disc05",
+        "status": "not present in public mirror",
+        "replacement": "course/assignments/self-checks.md"
+      }
+    ],
+    "scan_only_or_scan_heavy": [
+      "course/originals/sp23/discussion/disc13-regular.pdf"
+    ],
+    "sha256_manifest": "525041f5afd3fa5b503edd2c32f1b71c7fb4be258ae2837e3282172b695d28d8"
+  },
+  "sources": {
+    "archive_count": 6,
+    "repository_count": 106,
+    "archive_bytes": 193229149,
+    "compared_source_files_and_symlinks": 19986,
+    "manifest_sha256": "7c91ced7bedd7626a16515f6a14d582ce9572a1380d6cc72f53c290f211dbee1",
+    "pristine_commit": "58822b31abba1c7c1bab26883b98ab004a6f2451"
+  },
+  "documentation": {
+    "checked_markdown_documents": 20,
+    "local_links": 164,
+    "checked_from": "staged Git content, not untracked working files",
+    "log": ".local/logs/course-final-document-links.log",
+    "log_sha256": "d2c2d54e5ea4bca73b9259d9ca68bd3417de8d9ee40eaf9b5cd946e9148e045b"
+  },
+  "tests": {
+    "source_snapshot": 11,
+    "local_tooling": 52,
+    "total": 63
+  },
+  "host_environment": {
+    "original_rtl_checks": 21,
+    "modern_lab4_checks": 11,
+    "total": 32
+  },
+  "fresh_checkout": {
+    "built_default_rtl_configurations": [
+      "Sodor1StageConfig",
+      "CS152RocketConfig",
+      "CS152BaselineBoomConfig",
+      "Lab5MESIDualRocketConfig"
+    ],
+    "passed_programs": [
+      "towers",
+      "transpose",
+      "boom-runtime",
+      "mt-vvadd-naive",
+      "mt-matmul-naive"
+    ],
+    "used_host_installed_toolchains_and_download_caches": true,
+    "copied_host_simulators_or_compilation_targets": false,
+    "new_gem5_build_in_this_course_delivery_check": false
+  },
+  "evidence": {
+    "source_tests": {
+      "log": ".local/logs/course-final-course-tests.log",
+      "sha256": "bd307f4f2d4868a15dc9f87b67f4f3a48dfe09d3a3b066fda5d0030a08d8593f",
+      "required_marker": "Ran 11 tests"
+    },
+    "tooling_tests": {
+      "log": ".local/logs/course-final-cli-tests.log",
+      "sha256": "6beac1f39d8994d529c3496adc8f62ab0d2506f669bb9f5352427ba3ffe2ce37",
+      "required_marker": "Ran 52 tests"
+    },
+    "materials": {
+      "log": ".local/logs/course-final-content-check.log",
+      "sha256": "bc9b219d836b7bc5925cf43d6114ffa843dbcc21df59a7caf89654b00a0408b6",
+      "required_marker": "VERIFIED 56 structurally readable PDFs"
+    },
+    "pristine_restore": {
+      "log": ".local/logs/course-final-pristine.log",
+      "sha256": "01206ac83285d25cf76078be721446c233f633dc6097fefe61fb6f0b6ed0b554",
+      "required_marker": "PASS: committed pristine restore and built/runtime-tested source checkout match every final archived source entry"
+    },
+    "doctor": {
+      "log": ".local/logs/course-final-doctor.log",
+      "sha256": "e37632e1e2b40bce0df887c4d6c40e3f782a1268d0f0d433f7c29070f3d8de14",
+      "required_marker": "READY lab4-modern (11/11 checks)"
+    },
+    "lab1_isolated_run": {
+      "log": ".local/logs/course-isolated-lab1-run.log",
+      "sha256": "777f03580ed597013fae040ba953bc274861e4f97dcaf1269e2725450e4180bf",
+      "required_marker": "EXIT 0"
+    },
+    "lab2_isolated_run": {
+      "log": ".local/logs/course-isolated-lab2-run.log",
+      "sha256": "705835ca1aa91346d62420f9a1e7f52be91c1fd36dc35c49c9e361ebdf1ecbc3",
+      "required_marker": "EXIT 0"
+    },
+    "lab3_isolated_run": {
+      "log": ".local/logs/course-isolated-lab3-run.log",
+      "sha256": "501dd1721a9e34b45d2deaedae53901f2de945469c2c0d3874d659829e767723",
+      "required_marker": "EXIT 0"
+    },
+    "lab5_isolated_run": {
+      "log": ".local/logs/course-isolated-lab5-run.log",
+      "sha256": "b6b410619f54f2ae3784cc7a97a9777b54b1c2a48db14f795fa74450bf6e645a",
+      "required_marker": "EXIT 0"
+    },
+    "lab5-matmul_isolated_run": {
+      "log": ".local/logs/course-isolated-lab5-matmul-run.log",
+      "sha256": "55d282e62ce975d03367b8caaee3471b10218de5fd074b4c48b578c6cc9c5fcd",
+      "required_marker": "EXIT 0"
+    }
+  },
+  "limits": [
+    "Not an unmodified official single-semester release or a fully offline machine image.",
+    "Original Lab4 RVV 0.10 timing tools remain unavailable; selected route is explicitly RVV 1.0/gem5.",
+    "No official grader, student answers, Mystery disclosure or Spectre attack implementation.",
+    "SPEC CPU2006 is optional, licensed and not included.",
+    "Third-party material attribution is preserved; no redistribution permission is implied.",
+    "Local evidence logs are not preset PASS records in a new checkout."
+  ]
+}
