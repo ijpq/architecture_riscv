@@ -6,14 +6,14 @@
     {
       "destination": "chipyard-cs152-sp23",
       "archive": "lab1.tar.gz",
-      "bytes": 49289871,
-      "sha256": "e450b2594b454fdef155e87b89e8710f3cb92fa26c13bfa3be408509f7293f78",
+      "bytes": 49541325,
+      "sha256": "d9ad601ad209a048908f4219d027a9760e8a1e0cf9a0e8320f59d36cdba13b93",
       "repositories": [
         {
           "commit": "8e1332232885892a5647eba82ac8ae65417da60c",
           "origin": "https://github.com/ijpq/mycs152-chipyard.git",
           "tags": [],
-          "working_changes": "M\tenv.sh\nM\tgenerators/riscv-sodor",
+          "working_changes": "M\tenv.sh\nM\tgenerators/constellation\nM\tgenerators/cva6\nM\tgenerators/gemmini\nM\tgenerators/ibex\nM\tgenerators/nvdla\nM\tgenerators/riscv-sodor\nM\tgenerators/rocket-chip\nM\tgenerators/sha3\nM\tsims/firesim\nD\tsoftware/coremark\nD\tsoftware/firemarshal\nD\tsoftware/nvdla-workload\nD\tsoftware/spec2017\nD\ttoolchains/esp-tools/esp-tools-feedstock\nD\ttoolchains/esp-tools/riscv-isa-sim\nD\ttoolchains/esp-tools/riscv-pk\nD\ttoolchains/esp-tools/riscv-tests\nD\ttoolchains/libgloss\nD\ttoolchains/riscv-tools/riscv-isa-sim\nD\ttoolchains/riscv-tools/riscv-openocd\nD\ttoolchains/riscv-tools/riscv-pk\nD\ttoolchains/riscv-tools/riscv-tests\nD\ttoolchains/riscv-tools/riscv-tools-feedstock\nD\ttools/axe\nD\ttools/dromajo/dromajo-src\nD\ttools/torture\nD\tvlsi/hammer\nD\tvlsi/hammer-cadence-plugins\nD\tvlsi/hammer-mentor-plugins\nD\tvlsi/hammer-synopsys-plugins",
           "path": "."
         },
         {
@@ -34,14 +34,14 @@
           "commit": "b93fde3e2824f728c404e08984046d41679ec31f",
           "origin": "https://github.com/ucb-bar/constellation.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tespresso\nD\tsrc/main/resources/csrc/netrace",
           "path": "generators/constellation"
         },
         {
           "commit": "31fd9cdf801b407acee3989622902db59e474f90",
           "origin": "https://github.com/ucb-bar/cva6-wrapper.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsrc/main/resources/vsrc/cva6",
           "path": "generators/cva6"
         },
         {
@@ -55,7 +55,7 @@
           "commit": "6f57972db9b0815462cc0569f922792f83e35c5d",
           "origin": "https://github.com/ucb-bar/gemmini",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsoftware/gemmini-rocc-tests\nD\tsoftware/onnxruntime-riscv",
           "path": "generators/gemmini"
         },
         {
@@ -69,7 +69,7 @@
           "commit": "a5214d0a0a6351dc2e03930750f831b0f28df8bf",
           "origin": "https://github.com/ucb-bar/ibex-wrapper",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsrc/main/resources/vsrc/ibex",
           "path": "generators/ibex"
         },
         {
@@ -90,7 +90,7 @@
           "commit": "2b17011b266025704b958efeeca2363c0cdd446d",
           "origin": "https://github.com/ucb-bar/nvdla-wrapper.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsrc/main/resources/hw",
           "path": "generators/nvdla"
         },
         {
@@ -106,7 +106,7 @@
           "tags": [
             "refs/tags/v1.6"
           ],
-          "working_changes": "",
+          "working_changes": "M\thardfloat\nD\ttorture",
           "path": "generators/rocket-chip"
         },
         {
@@ -120,14 +120,14 @@
           "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
           "origin": "https://github.com/ucb-bar/berkeley-hardfloat.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tberkeley-softfloat-3\nD\tberkeley-testfloat-3",
           "path": "generators/rocket-chip/hardfloat"
         },
         {
           "commit": "88ada85a84253434ea5cef729d90cd74796aa442",
           "origin": "https://github.com/ucb-bar/sha3.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsoftware/linux",
           "path": "generators/sha3"
         },
         {
@@ -155,7 +155,7 @@
           "commit": "8176b657ee779ac4901b6b03aea0ac23a0b8874d",
           "origin": "https://github.com/firesim/firesim.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tdeploy/workloads/ccbench-cache-sweep/ccbench\nD\tdeploy/workloads/memcached-thread-imbalance/mutilate-loadgen-riscv-release\nD\tdeploy/workloads/runscripts/gapbs-scripts/gapbs\nD\tplatforms/f1/aws-fpga\nD\tsw/network-benchmarks\nD\ttarget-design/chipyard\nD\tutils/fireperf/FlameGraph",
           "path": "sims/firesim"
         },
         {
@@ -164,6 +164,13 @@
           "tags": [],
           "working_changes": "",
           "path": "tools/DRAMSim2"
+        },
+        {
+          "commit": "fd8df1105a92065425cd353b6855777e35bd79b4",
+          "origin": "https://github.com/chipsalliance/api-config-chipsalliance.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/api-config-chipsalliance"
         },
         {
           "commit": "06db6059022c55df8e6943702653798c43ead3d8",
@@ -185,6 +192,13 @@
           "tags": [],
           "working_changes": "",
           "path": "tools/dsptools"
+        },
+        {
+          "commit": "4448e06138a1d9281621f349c306c8a066589e67",
+          "origin": "https://github.com/ucb-bar/rocket-dsp-utils",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/rocket-dsp-utils"
         }
       ],
       "additional_files": [],
@@ -193,15 +207,22 @@
     {
       "destination": "edu_cs152/lab2",
       "archive": "lab2.tar.gz",
-      "bytes": 52190314,
-      "sha256": "a24d29dc5d4e45afa5bdca1f4189bf0d59e5d49ca1a69f21ed5232635de2a4bd",
+      "bytes": 61050751,
+      "sha256": "53bebeef34d225087ec5e8fbe9ce6b88f5075003e9ae6410089a08547534105a",
       "repositories": [
         {
           "commit": "7c2a55102898e73874382d10e63d607bd9ee586c",
           "origin": "",
           "tags": [],
-          "working_changes": "M\tlab/open2/Makefile\nD\ttests/htif.ld",
+          "working_changes": "M\tgenerators/cva6\nM\tgenerators/gemmini\nM\tgenerators/nvdla\nM\tgenerators/rocket-chip\nM\tgenerators/sha3\nM\tlab/open2/Makefile\nM\tsims/firesim\nD\tsoftware/coremark\nD\tsoftware/firemarshal\nD\tsoftware/nvdla-workload\nD\tsoftware/spec2017\nD\ttests/htif.ld\nD\ttoolchains/esp-tools/riscv-gnu-toolchain\nD\ttoolchains/esp-tools/riscv-isa-sim\nD\ttoolchains/esp-tools/riscv-pk\nD\ttoolchains/esp-tools/riscv-tests\nD\ttoolchains/libgloss\nD\ttoolchains/qemu\nD\ttoolchains/riscv-tools/riscv-gnu-toolchain\nD\ttoolchains/riscv-tools/riscv-gnu-toolchain-prebuilt\nD\ttoolchains/riscv-tools/riscv-isa-sim\nD\ttoolchains/riscv-tools/riscv-openocd\nD\ttoolchains/riscv-tools/riscv-pk\nD\ttoolchains/riscv-tools/riscv-tests\nD\ttools/axe\nD\ttools/dromajo/dromajo-src\nD\ttools/torture\nD\tvlsi/hammer\nD\tvlsi/hammer-cadence-plugins\nD\tvlsi/hammer-mentor-plugins\nD\tvlsi/hammer-synopsys-plugins",
           "path": "."
+        },
+        {
+          "commit": "f9fb9fd338e5fca2ff5116b1d01506c424280d70",
+          "origin": "https://github.com/sifive/fpga-shells.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "fpga/fpga-shells"
         },
         {
           "commit": "e1a70afed7de77f6ba9f6e501de71f7f41afc47c",
@@ -214,14 +235,14 @@
           "commit": "139741a584d7e3c0446db592b5d99529bd6cf9fa",
           "origin": "https://github.com/ucb-bar/cva6-wrapper.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsrc/main/resources/vsrc/cva6",
           "path": "generators/cva6"
         },
         {
           "commit": "7ac61db64fecbc8918b3039d738513b4a03337ca",
           "origin": "https://github.com/ucb-bar/gemmini",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsoftware/gemmini-rocc-tests\nD\tsoftware/onnxruntime-riscv",
           "path": "generators/gemmini"
         },
         {
@@ -242,7 +263,7 @@
           "commit": "b2b78c9f892a6196634eb3f1fbc443436c897a00",
           "origin": "https://github.com/ucb-bar/nvdla-wrapper.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsrc/main/resources/hw",
           "path": "generators/nvdla"
         },
         {
@@ -256,7 +277,7 @@
           "commit": "9192e5b842787258d8ea127bb179aa0bb7bd5310",
           "origin": "https://github.com/firesim/rocket-chip.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tchisel3\nD\tfirrtl\nD\ttorture",
           "path": "generators/rocket-chip"
         },
         {
@@ -277,7 +298,7 @@
           "commit": "63eda8268c16c502cada9944ae41b584e6e32789",
           "origin": "https://github.com/ucb-bar/sha3.git",
           "tags": [],
-          "working_changes": "",
+          "working_changes": "D\tsoftware/linux",
           "path": "generators/sha3"
         },
         {
@@ -302,12 +323,33 @@
           "path": "generators/testchipip"
         },
         {
+          "commit": "4b86df2d549444a88afe7070c863ed7d3ee40a5b",
+          "origin": "https://github.com/ucb-bar/ccbench.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "lab/open1/ccbench"
+        },
+        {
+          "commit": "d3b8a8ff0431e135d73a8deeabc9687d0b3f430e",
+          "origin": "https://github.com/sbeamer/gapbs.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "lab/open2/gapbs"
+        },
+        {
+          "commit": "8faa928819fb551325e76b463fc0c978e22f5be3",
+          "origin": "https://github.com/riscv/riscv-isa-sim.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "lab/open3/riscv-isa-sim"
+        },
+        {
           "commit": "b611551ca5ea391513584dc2cde3d82717309125",
           "origin": "https://github.com/firesim/firesim.git",
           "tags": [
             "refs/tags/1.12.0"
           ],
-          "working_changes": "",
+          "working_changes": "D\tdeploy/workloads/ccbench-cache-sweep/ccbench\nD\tdeploy/workloads/memcached-thread-imbalance/mutilate-loadgen-riscv-release\nD\tdeploy/workloads/runscripts/gapbs-scripts/gapbs\nD\tplatforms/f1/aws-fpga\nD\tsim/firesim-lib/src/main/cc/lib/boost\nD\tsim/firesim-lib/src/main/cc/lib/elfutils\nD\tsim/firesim-lib/src/main/cc/lib/libdwarf\nD\tsw/network-benchmarks\nD\ttarget-design/chipyard\nD\tutils/fireperf/FlameGraph",
           "path": "sims/firesim"
         },
         {
@@ -316,6 +358,13 @@
           "tags": [],
           "working_changes": "",
           "path": "tools/DRAMSim2"
+        },
+        {
+          "commit": "fd8df1105a92065425cd353b6855777e35bd79b4",
+          "origin": "https://github.com/chipsalliance/api-config-chipsalliance.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/api-config-chipsalliance"
         },
         {
           "commit": "a3711c4e19911b57b21bdcf8d459d19795f3201d",
@@ -365,6 +414,13 @@
           "tags": [],
           "working_changes": "",
           "path": "tools/firrtl-interpreter"
+        },
+        {
+          "commit": "355bf9f2038c68f4d44650f66d1516d171bfb224",
+          "origin": "https://github.com/ucb-bar/rocket-dsp-utils",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/rocket-dsp-utils"
         },
         {
           "commit": "925687ad22c42dd2c8b4dc127c0476f9902b3163",
@@ -739,8 +795,8 @@
     {
       "destination": "chipyard/toolchains/riscv-tools/riscv-tests",
       "archive": "rv32-reference.tar.gz",
-      "bytes": 754626,
-      "sha256": "b547c95c5e26eace0f9339a3ff90bb9fa285dc8b6e1a581aa3ca5c74b214e5e1",
+      "bytes": 812008,
+      "sha256": "8af1ef3dbb3c59513c458f8e43369e3f035e94970fdc399b5a008dcc076e8ddf",
       "repositories": [
         {
           "commit": "a6ab6ae6008ffc2ea907ea9f6d2b8379583e7d56",
@@ -748,6 +804,13 @@
           "tags": [],
           "working_changes": "",
           "path": "."
+        },
+        {
+          "commit": "0666378f353599d01fc48562b431b1dd049faab5",
+          "origin": "https://github.com/riscv/riscv-test-env.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "env"
         }
       ],
       "additional_files": [],

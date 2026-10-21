@@ -159,6 +159,27 @@ class SourceBundleTests(unittest.TestCase):
         self.assertEqual(git(restored / "generators/core", "rev-parse", "HEAD"), child_head)
         self.assertEqual((restored / "generators/core/Core.scala").read_text(), "class FixtureCore\n")
 
+    def test_build_libraries_and_open_lab_benchmarks_are_included(self):
+        paths = ("tools/api-config-chipsalliance", "tools/rocket-dsp-utils",
+                 "lab/open1/ccbench", "lab/open2/gapbs", "lab/open3/riscv-isa-sim", "env")
+        for name in paths:
+            child = self.repo / name
+            child.mkdir(parents=True)
+            git(child, "init", "-q")
+            (child / "source.c").write_text("int needed_for_fresh_build;\n")
+            git(child, "add", "source.c")
+            git(child, "-c", "user.name=Snapshot Fixture", "-c", "user.email=fixture@example.invalid", "commit", "-qm", "fixture: source dependency")
+            git(self.repo, "-c", "advice.addEmbeddedRepo=false", "add", name)
+        git(self.repo, "-c", "user.name=Snapshot Fixture", "-c", "user.email=fixture@example.invalid", "commit", "-qm", "fixture: build and benchmark gitlinks")
+        self.package()
+        BUNDLES.restore_bundles(self.destination, self.bundle_dir)
+        for name in paths:
+            with self.subTest(dependency=name):
+                restored = self.destination / "fixture" / name
+                self.assertTrue((restored / "source.c").is_file())
+                self.assertEqual(git(restored, "rev-parse", "HEAD"),
+                                 git(self.repo / name, "rev-parse", "HEAD"))
+
     def test_private_git_config_hooks_and_credentials_do_not_enter_snapshot(self):
         git(self.repo, "config", "remote.origin.url", "https://fixture-secret@github.com/example/fixture.git")
         git(self.repo, "config", "core.sshCommand", "must-not-copy-this-command")

@@ -6,7 +6,8 @@ import subprocess
 LOCAL_TOOLS = {
     "tools/barstools", "tools/DRAMSim2", "tools/chisel-testers", "tools/chisel3",
     "tools/firrtl", "tools/firrtl-interpreter", "tools/treadle", "tools/dsptools",
-    "sims/firesim", "fpga/fpga-shells",
+    "sims/firesim", "fpga/fpga-shells", "tools/api-config-chipsalliance",
+    "tools/rocket-dsp-utils", "env",  # RISC-V tests require env/encoding.h.
 }
 NESTED_TOOLS = ("hardfloat", "api-config", "cde", "berkeley-hardfloat", "mdf")
 EXTRAS = {
@@ -38,7 +39,7 @@ def selected_repositories(root: Path, depth: int = 0) -> list[Path]:
     for mode, name in index_entries(root):
         if mode != "160000":
             continue
-        wanted = (name.startswith("generators/") or name in LOCAL_TOOLS) if depth == 0 else any(
+        wanted = (name.startswith(("generators/", "lab/")) or name in LOCAL_TOOLS) if depth == 0 else any(
             token in name.lower() for token in NESTED_TOOLS)
         child = root / name
         if wanted and (child / ".git").exists():

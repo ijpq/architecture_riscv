@@ -99,6 +99,9 @@ def build(lab, config):
         for directory in generated.glob("*." + config):
             for makefile in directory.glob("**/VTestHarness.mk"):
                 makefile.unlink()
+    # New Chipyard's Makefile sets java.io.tmpdir to this directory but does
+    # not create it. It is generated state, so source snapshots omit it.
+    (labroot(lab) / ".java_tmp").mkdir(exist_ok=True)
     execute(command, labroot(lab) / "sims/verilator", f"{lab}-{config}-build")
     stamp.parent.mkdir(parents=True, exist_ok=True)
     stamp.write_text(signature)

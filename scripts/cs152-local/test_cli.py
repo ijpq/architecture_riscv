@@ -70,6 +70,19 @@ class CliTests(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "fake cycle counts"):
             cli.run("lab4", None, "unused", 100, 1)
 
+    def test_fresh_build_creates_the_makefiles_java_temporary_directory(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "chipyard"
+            root.mkdir()
+            def make(command, cwd, label):
+                self.assertTrue((root / ".java_tmp").is_dir())
+                self.assertEqual(cwd, root / "sims/verilator")
+            with patch.object(cli, "labroot", return_value=root), \
+                    patch.object(cli, "LOCAL", Path(tmp) / ".local"), \
+                    patch.object(cli, "execute", side_effect=make), \
+                    patch.object(cli, "digest", return_value="fixture-sha256"):
+                cli.build("lab1", "Sodor1StageConfig")
+
     def test_lab4_setup_explains_blocker_without_running_downloads(self):
         with tempfile.TemporaryDirectory() as tmp, patch.object(cli, "LOCAL", Path(tmp)), \
                 patch.object(sys, "argv", ["cs152", "setup", "lab4"]), \
