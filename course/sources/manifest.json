@@ -6,8 +6,8 @@
     {
       "destination": "chipyard-cs152-sp23",
       "archive": "lab1.tar.gz",
-      "bytes": 49541325,
-      "sha256": "d9ad601ad209a048908f4219d027a9760e8a1e0cf9a0e8320f59d36cdba13b93",
+      "bytes": 49541321,
+      "sha256": "f7f8189aef45a5dd2c0279991f38018ce7917a6bbb6a835e38cdda0ab46c33a0",
       "repositories": [
         {
           "commit": "8e1332232885892a5647eba82ac8ae65417da60c",

@@ -115,6 +115,7 @@ scripts/cs152-local/cs152 lab4-modern run vec-csaxpy \
 `cycles` 是模拟 CPU 周期，`instructions` 是该区段的模拟指令统计，不是主机计时。
 
 ```bash
+scripts/cs152-local/cs152 lab4-modern benchmarks
 scripts/cs152-local/cs152 lab4-modern verify
 scripts/cs152-local/cs152 lab4-modern doctor
 # 全套采用明确授权的现代 Lab 4 路线：
@@ -125,6 +126,7 @@ scripts/cs152-local/cs152 doctor all --lab4 original
 
 环境验收要求 7 个原标量校验、课程向量示例，以及 RVV 自检的不同 VLEN/延迟运行；
 提高依赖指令链的功能单元延迟必须实际增加模拟周期。未完成的学生练习不被算作已完成答案。
+`benchmarks` 编译程序；`verify` 只运行验收，不编译。ELF 缺失或编译指纹过期时，须先重新执行 `benchmarks`。
 
 每次运行将命令、日志、`stats.txt`、`summary.json` 和配置保存在 `.local/`，通过后才写 SHA-256 证据。
 现代 `doctor` 检查程序、模拟器、相关源码、配置、日志和统计指纹；修改后应重新编译并复验。

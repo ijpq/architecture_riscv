@@ -1,0 +1,11 @@
+--- a/scripts/tracer.py
++++ b/scripts/tracer.py
+@@ -35,6 +35,7 @@
+ # Use Regex to decode and read each line of the trace
+ if args.ucode:
+-    regex = "Cyc=([ 0-9]+) \[([03])\] PCReg=\[([0-9a-f]+)\] uPC=\[([0-9a-f]+)\] Bus=\[([0-9a-f]+)\] RegSel=\[([0-9a-f]+)\] RegAddr=\[([ 0-9a-f]+)\] A=\[([0-9a-f]+)\] B=\[([0-9a-f]+)\] MA=\[([0-9a-f]+)\] InstReg=\[([0-9a-f]+)\] ([F ])([M ])([X ]) ([ a-z0-9-,.()]+)"
++    # The trace prints csr.io.retire, a Boolean marker with values 0 or 1.
++    regex = "Cyc=([ 0-9]+) \[([01])\] PCReg=\[([0-9a-f]+)\] uPC=\[([0-9a-f]+)\] Bus=\[([0-9a-f]+)\] RegSel=\[([0-9a-f]+)\] RegAddr=\[([ 0-9a-f]+)\] A=\[([0-9a-f]+)\] B=\[([0-9a-f]+)\] MA=\[([0-9a-f]+)\] InstReg=\[([0-9a-f]+)\] ([F ])([M ])([X ]) ([ a-z0-9-,.()]+)"
+     groupmap = {
+         "cycle" : 1,
+         "retire" : 2,

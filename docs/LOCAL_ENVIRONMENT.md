@@ -18,7 +18,7 @@ Lab 4 使用独立的 RVV 1.0 + gem5 时序实验，**不是原 RVV 0.10 实验�
 
 验收检查的是环境，不是学生答案：没有实现 Spectre 攻击、优化学生算法或反编译 Mystery Cache 参数。
 代表性小工作负载通过，不表示所有大规模参数组合和学生实现都已通过。
-Lab 2 可选 SPEC CPU2006 需要合法授权，未包含在恢复范围内。
+Lab 2 快照的 `lab/open3/CPU2006/` 保留上游已有的部分 SPEC CPU2006 源码、文档和测试数据；该可选路线未纳入本地构建及运行验收，使用仍需合法授权。具体范围见 [源码包说明](../course/sources/README.md)。
 这套环境不提供 Berkeley 私有评分服务或受限课程视频；书面作业仍需按对应年份资料自行完成。
 
 ## 入口与诊断
@@ -188,12 +188,14 @@ scripts/cs152-local/cs152 lab4-modern run vec-cmplxmult --vlen 256
 # 如需从头重建或重跑本实验的环境验收：
 scripts/cs152-local/cs152 lab4-modern setup
 scripts/cs152-local/cs152 lab4-modern build
+scripts/cs152-local/cs152 lab4-modern benchmarks
 scripts/cs152-local/cs152 lab4-modern verify
 ```
 
 未完成的练习运行失败是预期行为，不是已经替你完成了作业。
 性能数据来自 `setStats` 包围的 ROI；校验在 ROI 外执行，但必须通过后才写成功证据。
-`verify` 会重编全部 15 个程序，运行 7 个标量、原示例和 3 个运行库/时序自检。
+`benchmarks` 不带程序名时编译全部 15 个程序。`verify` 使用已编译的程序，运行 7 个标量、原示例和 3 个运行库/时序自检；它不执行编译。
+若 ELF 缺失或编译指纹过期，先运行 `lab4-modern benchmarks`，再运行 `verify`。
 它会改写相同名称的运行证据；正式测量可另存对应日志和 `stats.txt`。
 
 模型为 1 GHz RiscvO3CPU、时序缓存/内存。可调 `--vlen 128/256/512/1024`、

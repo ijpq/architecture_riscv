@@ -33,10 +33,11 @@
   "sources": {
     "archive_count": 6,
     "repository_count": 106,
-    "archive_bytes": 193229149,
+    "archive_bytes": 193229145,
     "compared_source_files_and_symlinks": 19986,
-    "manifest_sha256": "7c91ced7bedd7626a16515f6a14d582ce9572a1380d6cc72f53c290f211dbee1",
-    "pristine_commit": "58822b31abba1c7c1bab26883b98ab004a6f2451"
+    "manifest_sha256": "f84798bb919b7113fb714e72dc8112ee30c2ac08afb72686dcae5948a802b0dc",
+    "pristine_commit": "58822b31abba1c7c1bab26883b98ab004a6f2451",
+    "archive_revision_note": "Size/hash reflect the later microcode trace-parser fix; pristine_commit and isolated RTL build evidence describe the original verification."
   },
   "documentation": {
     "checked_markdown_documents": 20,
@@ -125,11 +126,80 @@
       "required_marker": "EXIT 0"
     }
   },
+  "post_review_corrections": {
+    "checked_at": "2026-10-21T14:59:25.702484+00:00",
+    "base_commit": "740a927fad8766ec75138846631d46d9d32b0f20",
+    "checked_from": "working tree; original cold-build evidence above remains historical",
+    "changes": [
+      "Fix Sodor microcode retirement marker parsing in live sources and the Lab1 archive, with three end-to-end regressions.",
+      "Document explicit benchmarks compilation before lab4-modern verify.",
+      "Describe partial upstream SPEC CPU2006 files accurately; optional route remains outside local build/validation scope."
+    ],
+    "tests": {
+      "course": 14,
+      "local_tooling": 52,
+      "total": 66,
+      "isolated_restored_tracer": 3
+    },
+    "source_archives": {
+      "verified": 6,
+      "lab1_changed_members": 1,
+      "lab1_unchanged_members": 4798,
+      "manifest_sha256": "f84798bb919b7113fb714e72dc8112ee30c2ac08afb72686dcae5948a802b0dc",
+      "trace_patch_sha256": "1f6bb73dd7ba6c5239edc48938e206a3febc0f71bf1cba0dfb77bd8b469242b5",
+      "existing_student_changes_preserved": true
+    },
+    "host_environment": {
+      "runtime_evidence_checks": 32,
+      "rtl_rebuilt": false,
+      "gem5_rebuilt": false
+    },
+    "documentation": {
+      "changed_markdown_documents": 6,
+      "local_links": 27
+    },
+    "evidence": {
+      "course_tests": {
+        "log": ".local/logs/course-corrections-course-tests.log",
+        "sha256": "45859eb52f048acb52a2e7423ff56bfef66bdc5a61b90c051af5bec56cfcdb82",
+        "required_marker": "Ran 14 tests"
+      },
+      "tooling_tests": {
+        "log": ".local/logs/course-corrections-tooling-tests.log",
+        "sha256": "c1d59ce99823e2769ae2054ace5225d82ef5746ae3fe668e5aebbc11df163bda",
+        "required_marker": "Ran 52 tests"
+      },
+      "source_archives": {
+        "log": ".local/logs/course-corrections-source-check.log",
+        "sha256": "f3d74bceca0c81d515146d6406f6f9566f3cdbc82993b1042b7761ab282bcf8f",
+        "required_marker": "VERIFIED 6 source archives"
+      },
+      "isolated_restore": {
+        "log": ".local/logs/course-corrections-isolated-restore.log",
+        "sha256": "66f99b73a75719a1fece135cf5f8d93507e7e2bf3476c7194f6e705e5d1f3baa",
+        "required_marker": "PASS: isolated Lab1 restore and documented patch workflow"
+      },
+      "doctor": {
+        "log": ".local/logs/course-corrections-doctor.log",
+        "sha256": "1ea6bd2ebf3be6e08185e0288ba33398914bd892acb56fd470e7bc55f0c0d5df",
+        "required_marker": "READY lab4-modern (11/11 checks)"
+      },
+      "document_links": {
+        "log": ".local/logs/course-corrections-links.log",
+        "sha256": "084db040f776dbf45dc462a0aeb85152c57253796bc6be0c659b8c2ba15f6661",
+        "required_marker": "PASS: 27 local links in 6 changed Markdown documents resolve"
+      },
+      "archive_comparison": {
+        "log": ".local/logs/course-corrections-archive.json",
+        "sha256": "fca1823f52f3aee59c4a553e5a39f66647b11bd4cb2829cd75876264dbd2cf8b"
+      }
+    }
+  },
   "limits": [
     "Not an unmodified official single-semester release or a fully offline machine image.",
     "Original Lab4 RVV 0.10 timing tools remain unavailable; selected route is explicitly RVV 1.0/gem5.",
     "No official grader, student answers, Mystery disclosure or Spectre attack implementation.",
-    "SPEC CPU2006 is optional, licensed and not included.",
+    "Lab2 includes partial upstream SPEC CPU2006 source, documentation and test data; this optional route is not built or validated locally and use requires a lawful license.",
     "Third-party material attribution is preserved; no redistribution permission is implied.",
     "Local evidence logs are not preset PASS records in a new checkout."
   ]

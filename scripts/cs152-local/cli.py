@@ -275,7 +275,7 @@ def benchmarks(lab, harts):
         # open1 defaults to a long RTL sweep, open3 to licensed SPEC. Build only.
         execute(["make", "-B", "ccbench-caches"], root / "lab/open1", "lab2-open1-benchmarks")
         execute(["make", "-j2", "gapbs"], root / "lab/open2", "lab2-open2-benchmarks")
-        print("SKIP optional open3: licensed SPEC CPU2006 is not bundled.")
+        print("SKIP optional open3: SPEC CPU2006 is outside local build/validation scope; partial upstream files are bundled.")
     elif lab == "lab3":
         execute(["make", "-B", "-j2"], root / "lab/open2", "lab3-open2-benchmarks")
         checks = LOCAL / "checks"
@@ -370,7 +370,8 @@ def doctor(selected="all", lab4_mode="original"):
         else:
             print("BLOCKED lab4: course RVV0.10 compiler + timing Spike package is missing; ordinary Spike is NOT equivalent.")
             ok = False
-    print("NOTE SPEC CPU2006 is licensed/optional and not bundled. See docs/LOCAL_ENVIRONMENT.md for scope.")
+    print("NOTE optional SPEC CPU2006: partial upstream files are bundled; local checks do not validate this route. "
+          "Use requires a lawful license. See docs/LOCAL_ENVIRONMENT.md for scope.")
     return 0 if ok else 1
 
 
