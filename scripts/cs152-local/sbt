@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -euo pipefail
+source "$(dirname -- "${BASH_SOURCE[0]}")/env.sh"
+# Reuse the operator's Git HTTPS proxy for legacy plugin archives when configured.
+# CS152_PROXY=direct disables this without changing any global settings.
+proxy="${CS152_PROXY:-$(git config --get http.proxy || true)}"
+proxy_options=()
+if [[ "$proxy" =~ ^http://([^/:]+):([0-9]+)/?$ ]]; then
+  proxy_options=(-Dhttps.proxyHost="${BASH_REMATCH[1]}" -Dhttps.proxyPort="${BASH_REMATCH[2]}"
+                 -Dhttp.proxyHost="${BASH_REMATCH[1]}" -Dhttp.proxyPort="${BASH_REMATCH[2]}")
+fi
+jvm_options=()
+commands=()
+if [[ "$PWD" == "$CS152_ROOT/edu_cs152/lab2" ]]; then
+  # The original FIRRTL version is 1.4.1. Old test-only SNAPSHOT artifacts
+  # vanished; keep the pinned source projects, resolve their metadata to releases.
+  commands+=('set every dependencyOverrides := Seq("edu.berkeley.cs" %% "treadle" % "1.3.4", "edu.berkeley.cs" %% "firrtl" % "1.4.1")')
+fi
+if [[ -d "$PWD/tools/chisel3" ]]; then
+  jvm_options+=(-Dsbt.sourcemode=true -Dsbt.workspace="$PWD/tools")
+fi
+for argument in "$@"; do
+  case "$argument" in
+    -D*) jvm_options+=("$argument") ;;
+    -batch|--batch) ;; # Noninteractive already: this wrapper receives explicit commands.
+    *) commands+=("$argument") ;;
+  esac
+done
+exec "$JAVA_HOME/bin/java" "${proxy_options[@]}" "${jvm_options[@]}" -Xms512M -Xmx8G -Xss4M \
+  -XX:ActiveProcessorCount="$CS152_JOBS" \
+  -Dsbt.override.build.repos=true \
+  -Dsbt.repository.config="$CS152_ROOT/scripts/cs152-local/repositories" \
+  -Dsbt.supershell=false -Dsbt.server.autostart=false \
+  -jar "$CS152_CONDA/share/sbt/bin/sbt-launch.jar" "${commands[@]}"

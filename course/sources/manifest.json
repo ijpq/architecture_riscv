@@ -1,0 +1,757 @@
+{
+  "format": 1,
+  "git_history": "one shallow upstream commit per repository",
+  "scope": "Current tracked working sources plus explicit course compatibility files",
+  "bundles": [
+    {
+      "destination": "chipyard-cs152-sp23",
+      "archive": "lab1.tar.gz",
+      "bytes": 49289871,
+      "sha256": "e450b2594b454fdef155e87b89e8710f3cb92fa26c13bfa3be408509f7293f78",
+      "repositories": [
+        {
+          "commit": "8e1332232885892a5647eba82ac8ae65417da60c",
+          "origin": "https://github.com/ijpq/mycs152-chipyard.git",
+          "tags": [],
+          "working_changes": "M\tenv.sh\nM\tgenerators/riscv-sodor",
+          "path": "."
+        },
+        {
+          "commit": "f1187f21a0e0a36366e43994f936d04329bfc630",
+          "origin": "https://github.com/chipsalliance/rocket-chip-fpga-shells.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "fpga/fpga-shells"
+        },
+        {
+          "commit": "9e4269088ed7f83ad57b75d62082170c2c502952",
+          "origin": "https://github.com/riscv-boom/riscv-boom.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/boom"
+        },
+        {
+          "commit": "b93fde3e2824f728c404e08984046d41679ec31f",
+          "origin": "https://github.com/ucb-bar/constellation.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/constellation"
+        },
+        {
+          "commit": "31fd9cdf801b407acee3989622902db59e474f90",
+          "origin": "https://github.com/ucb-bar/cva6-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/cva6"
+        },
+        {
+          "commit": "40357f00a8f091e97be9dbf39256e511dac6c494",
+          "origin": "https://github.com/ucb-bar/FFTGenerator.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/fft-generator"
+        },
+        {
+          "commit": "6f57972db9b0815462cc0569f922792f83e35c5d",
+          "origin": "https://github.com/ucb-bar/gemmini",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/gemmini"
+        },
+        {
+          "commit": "b0795a3aafd3b22b00061c1c3e2e710d73b4f112",
+          "origin": "https://github.com/ucb-bar/hwacha.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/hwacha"
+        },
+        {
+          "commit": "a5214d0a0a6351dc2e03930750f831b0f28df8bf",
+          "origin": "https://github.com/ucb-bar/ibex-wrapper",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/ibex"
+        },
+        {
+          "commit": "e14c1e8c54851d3fa7bc55fbbc6fc48873a3b2a9",
+          "origin": "https://github.com/firesim/icenet.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/icenet"
+        },
+        {
+          "commit": "b9eaedc061adbbe488f4c094f0ddd2177852e11a",
+          "origin": "https://github.com/ucb-bar/mempress.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/mempress"
+        },
+        {
+          "commit": "2b17011b266025704b958efeeca2363c0cdd446d",
+          "origin": "https://github.com/ucb-bar/nvdla-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/nvdla"
+        },
+        {
+          "commit": "7464392cdfe73c5f9428f175ca53473ae1481845",
+          "origin": "https://github.com/ijpq/riscv-sodor.git",
+          "tags": [],
+          "working_changes": "M\tscripts/tracer.py\nM\tsrc/main/scala/common/instructions.scala\nM\tsrc/main/scala/rv32_ucode/microcode.scala",
+          "path": "generators/riscv-sodor"
+        },
+        {
+          "commit": "44b0b8249279d25bd75ea693b725d9ff1b96e2ab",
+          "origin": "https://github.com/chipsalliance/rocket-chip.git",
+          "tags": [
+            "refs/tags/v1.6"
+          ],
+          "working_changes": "",
+          "path": "generators/rocket-chip"
+        },
+        {
+          "commit": "fd8df1105a92065425cd353b6855777e35bd79b4",
+          "origin": "https://github.com/chipsalliance/api-config-chipsalliance.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/api-config-chipsalliance"
+        },
+        {
+          "commit": "70455e53f233a06cb5a342d125e22b7b1505c271",
+          "origin": "https://github.com/ucb-bar/berkeley-hardfloat.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/hardfloat"
+        },
+        {
+          "commit": "88ada85a84253434ea5cef729d90cd74796aa442",
+          "origin": "https://github.com/ucb-bar/sha3.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sha3"
+        },
+        {
+          "commit": "e8adf0e3ef94f76f73001fbeda767d6899c60eb3",
+          "origin": "https://github.com/chipsalliance/rocket-chip-blocks.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-blocks"
+        },
+        {
+          "commit": "2e47c707e04dbbbdbf81561a979c055f87ac8df2",
+          "origin": "https://github.com/chipsalliance/rocket-chip-inclusive-cache.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-cache"
+        },
+        {
+          "commit": "70cdc3f0206453aa9cbb76ba9619b87d7e10266a",
+          "origin": "https://github.com/ucb-bar/testchipip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/testchipip"
+        },
+        {
+          "commit": "8176b657ee779ac4901b6b03aea0ac23a0b8874d",
+          "origin": "https://github.com/firesim/firesim.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "sims/firesim"
+        },
+        {
+          "commit": "49ec2f32eea6687a36acdb8d1d636d992d9e8daa",
+          "origin": "https://github.com/firesim/DRAMSim2.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/DRAMSim2"
+        },
+        {
+          "commit": "06db6059022c55df8e6943702653798c43ead3d8",
+          "origin": "https://github.com/ucb-bar/barstools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools"
+        },
+        {
+          "commit": "ce4e027e5f3d871df59236b8471ea3e5be40130e",
+          "origin": "https://github.com/freechipsproject/chisel-testers.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/chisel-testers"
+        },
+        {
+          "commit": "a1809fbae9e49de7213116bbec79252645292e39",
+          "origin": "https://github.com/ucb-bar/dsptools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/dsptools"
+        }
+      ],
+      "additional_files": [],
+      "name": "lab1"
+    },
+    {
+      "destination": "edu_cs152/lab2",
+      "archive": "lab2.tar.gz",
+      "bytes": 52190314,
+      "sha256": "a24d29dc5d4e45afa5bdca1f4189bf0d59e5d49ca1a69f21ed5232635de2a4bd",
+      "repositories": [
+        {
+          "commit": "7c2a55102898e73874382d10e63d607bd9ee586c",
+          "origin": "",
+          "tags": [],
+          "working_changes": "M\tlab/open2/Makefile\nD\ttests/htif.ld",
+          "path": "."
+        },
+        {
+          "commit": "e1a70afed7de77f6ba9f6e501de71f7f41afc47c",
+          "origin": "https://github.com/riscv-boom/riscv-boom.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/boom"
+        },
+        {
+          "commit": "139741a584d7e3c0446db592b5d99529bd6cf9fa",
+          "origin": "https://github.com/ucb-bar/cva6-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/cva6"
+        },
+        {
+          "commit": "7ac61db64fecbc8918b3039d738513b4a03337ca",
+          "origin": "https://github.com/ucb-bar/gemmini",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/gemmini"
+        },
+        {
+          "commit": "62c01f5a8858aa1b827f0f9372a4392d7b596fca",
+          "origin": "https://github.com/ucb-bar/hwacha.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/hwacha"
+        },
+        {
+          "commit": "084ca5070605ea7919358f917289cca240d0289a",
+          "origin": "https://github.com/firesim/icenet.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/icenet"
+        },
+        {
+          "commit": "b2b78c9f892a6196634eb3f1fbc443436c897a00",
+          "origin": "https://github.com/ucb-bar/nvdla-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/nvdla"
+        },
+        {
+          "commit": "449354c27bf07ccc865dc6c005df1d08eaf5b01c",
+          "origin": "https://github.com/ucb-bar/riscv-sodor.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/riscv-sodor"
+        },
+        {
+          "commit": "9192e5b842787258d8ea127bb179aa0bb7bd5310",
+          "origin": "https://github.com/firesim/rocket-chip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip"
+        },
+        {
+          "commit": "fd8df1105a92065425cd353b6855777e35bd79b4",
+          "origin": "https://github.com/chipsalliance/api-config-chipsalliance.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/api-config-chipsalliance"
+        },
+        {
+          "commit": "01904f99ed3ad26cdbe2876f638d63e30e7fecdc",
+          "origin": "https://github.com/ucb-bar/berkeley-hardfloat.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/hardfloat"
+        },
+        {
+          "commit": "63eda8268c16c502cada9944ae41b584e6e32789",
+          "origin": "https://github.com/ucb-bar/sha3.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sha3"
+        },
+        {
+          "commit": "545a396f3486132b01ceef3cbce2085608984478",
+          "origin": "https://github.com/sifive/sifive-blocks.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-blocks"
+        },
+        {
+          "commit": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0",
+          "origin": "https://github.com/sifive/block-inclusivecache-sifive.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-cache"
+        },
+        {
+          "commit": "0743c5a9410af713fb7a1c0025d6331dfedec328",
+          "origin": "https://github.com/ucb-bar/testchipip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/testchipip"
+        },
+        {
+          "commit": "b611551ca5ea391513584dc2cde3d82717309125",
+          "origin": "https://github.com/firesim/firesim.git",
+          "tags": [
+            "refs/tags/1.12.0"
+          ],
+          "working_changes": "",
+          "path": "sims/firesim"
+        },
+        {
+          "commit": "2ec7965b2ee051aaff03d5db21c6709aea4dd24e",
+          "origin": "https://github.com/firesim/DRAMSim2.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/DRAMSim2"
+        },
+        {
+          "commit": "a3711c4e19911b57b21bdcf8d459d19795f3201d",
+          "origin": "https://github.com/ucb-bar/barstools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools"
+        },
+        {
+          "commit": "4be9b173647c77f990a542f4eb5f69af01d77316",
+          "origin": "https://github.com/ucb-bar/plsi-mdf.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools/mdf"
+        },
+        {
+          "commit": "ce4e027e5f3d871df59236b8471ea3e5be40130e",
+          "origin": "https://github.com/freechipsproject/chisel-testers.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/chisel-testers"
+        },
+        {
+          "commit": "58d38f9620e7e91e4668266686484073c0ba7d2e",
+          "origin": "https://github.com/freechipsproject/chisel3.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/chisel3"
+        },
+        {
+          "commit": "aad6a3db1520a05ae668681941a19bdcc40aec03",
+          "origin": "https://github.com/ucb-bar/dsptools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/dsptools"
+        },
+        {
+          "commit": "7756f8f9634b68a1375d2c2ca13abc5742234201",
+          "origin": "https://github.com/freechipsproject/firrtl",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/firrtl"
+        },
+        {
+          "commit": "5ab0cfe7020ca17804078c85d020730764ee176f",
+          "origin": "https://github.com/freechipsproject/firrtl-interpreter.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/firrtl-interpreter"
+        },
+        {
+          "commit": "925687ad22c42dd2c8b4dc127c0476f9902b3163",
+          "origin": "https://github.com/freechipsproject/treadle.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/treadle"
+        }
+      ],
+      "additional_files": [
+        "lab/open2/htif-clock.cc",
+        "lab/open2/htif-cxx.specs"
+      ],
+      "name": "lab2"
+    },
+    {
+      "destination": "edu_cs152/lab3",
+      "archive": "lab3.tar.gz",
+      "bytes": 43088135,
+      "sha256": "1a19553f0384c1a73c5f7d8e056c2455811686d46a6759d06f322d34ab06058e",
+      "repositories": [
+        {
+          "commit": "1b8736ef7234071c1f1f44fec3b8723ebc6bc9ce",
+          "origin": "",
+          "tags": [],
+          "working_changes": "M\tcommon.mk\nD\ttests/htif.ld",
+          "path": "."
+        },
+        {
+          "commit": "f9fb9fd338e5fca2ff5116b1d01506c424280d70",
+          "origin": "https://github.com/sifive/fpga-shells.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "fpga/fpga-shells"
+        },
+        {
+          "commit": "9f00e5071c1b0b4f6142b2af44a46ffcffe82cd7",
+          "origin": "https://github.com/riscv-boom/riscv-boom.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/boom"
+        },
+        {
+          "commit": "139741a584d7e3c0446db592b5d99529bd6cf9fa",
+          "origin": "https://github.com/ucb-bar/cva6-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/cva6"
+        },
+        {
+          "commit": "9a92fa07e7432376331e5f013cc00695d6ac783a",
+          "origin": "https://github.com/ucb-bar/gemmini",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/gemmini"
+        },
+        {
+          "commit": "62c01f5a8858aa1b827f0f9372a4392d7b596fca",
+          "origin": "https://github.com/ucb-bar/hwacha.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/hwacha"
+        },
+        {
+          "commit": "084ca5070605ea7919358f917289cca240d0289a",
+          "origin": "https://github.com/firesim/icenet.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/icenet"
+        },
+        {
+          "commit": "b2b78c9f892a6196634eb3f1fbc443436c897a00",
+          "origin": "https://github.com/ucb-bar/nvdla-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/nvdla"
+        },
+        {
+          "commit": "449354c27bf07ccc865dc6c005df1d08eaf5b01c",
+          "origin": "https://github.com/ucb-bar/riscv-sodor.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/riscv-sodor"
+        },
+        {
+          "commit": "a7b016e46e22e4fdc013357051e30511f80df082",
+          "origin": "https://github.com/ucb-bar/rocket-chip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip"
+        },
+        {
+          "commit": "fd8df1105a92065425cd353b6855777e35bd79b4",
+          "origin": "https://github.com/chipsalliance/api-config-chipsalliance.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/api-config-chipsalliance"
+        },
+        {
+          "commit": "01904f99ed3ad26cdbe2876f638d63e30e7fecdc",
+          "origin": "https://github.com/ucb-bar/berkeley-hardfloat.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/hardfloat"
+        },
+        {
+          "commit": "74e41f579213549501ccf292d101f9db73ee2347",
+          "origin": "https://github.com/ucb-bar/sha3.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sha3"
+        },
+        {
+          "commit": "545a396f3486132b01ceef3cbce2085608984478",
+          "origin": "https://github.com/sifive/sifive-blocks.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-blocks"
+        },
+        {
+          "commit": "e3a3000cc1fd4cdf3a4e638e4d081b8aae94ebf0",
+          "origin": "https://github.com/sifive/block-inclusivecache-sifive.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-cache"
+        },
+        {
+          "commit": "f27055929a2d4c091bfe10c3b64761e281844a2b",
+          "origin": "https://github.com/ucb-bar/testchipip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/testchipip"
+        },
+        {
+          "commit": "1e6d7861588ced4ebe286228dce340692df8b4c4",
+          "origin": "https://github.com/firesim/firesim.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "sims/firesim"
+        },
+        {
+          "commit": "2ec7965b2ee051aaff03d5db21c6709aea4dd24e",
+          "origin": "https://github.com/firesim/DRAMSim2.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/DRAMSim2"
+        },
+        {
+          "commit": "9130e36fd1f0dbe7dad4ffe1a0e672246239f8d2",
+          "origin": "https://github.com/ucb-bar/barstools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools"
+        },
+        {
+          "commit": "e588024d706220b73f2c97ca75d6fec8dd0d41b1",
+          "origin": "https://github.com/ucb-bar/plsi-mdf.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools/mdf"
+        },
+        {
+          "commit": "ce4e027e5f3d871df59236b8471ea3e5be40130e",
+          "origin": "https://github.com/freechipsproject/chisel-testers.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/chisel-testers"
+        },
+        {
+          "commit": "aad6a3db1520a05ae668681941a19bdcc40aec03",
+          "origin": "https://github.com/ucb-bar/dsptools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/dsptools"
+        }
+      ],
+      "additional_files": [
+        "lab/open2/pk-spectre"
+      ],
+      "name": "lab3"
+    },
+    {
+      "destination": "edu_cs152/lab4",
+      "archive": "lab4-original.tar.gz",
+      "bytes": 2763842,
+      "sha256": "68eb6cf6b2127cdaae7ea2069ddf2eb4de0b1e8b42758cac75ce4de08a559852",
+      "repositories": [
+        {
+          "commit": "f2d5227355c2016abcb6835e273a367531fcdf6a",
+          "origin": "",
+          "tags": [],
+          "working_changes": "T\tbenchmarks/vec-cmplxmult/cmplxmult.h\nT\tbenchmarks/vec-cmplxmult/dataset1.h\nT\tbenchmarks/vec-cmplxmult/vec_cmplxmult_main.c\nT\tbenchmarks/vec-csaxpy/csaxpy.h\nT\tbenchmarks/vec-csaxpy/dataset1.h\nT\tbenchmarks/vec-csaxpy/vec_csaxpy_main.c\nT\tbenchmarks/vec-dgemm/dataset1.h\nT\tbenchmarks/vec-dgemm/dgemm.h\nT\tbenchmarks/vec-dgemm/vec_dgemm_main.c\nT\tbenchmarks/vec-dgemv/dataset1.h\nT\tbenchmarks/vec-dgemv/dgemv.h\nT\tbenchmarks/vec-dgemv/vec_dgemv_main.c\nT\tbenchmarks/vec-imax/dataset1.h\nT\tbenchmarks/vec-imax/imax.h\nT\tbenchmarks/vec-imax/vec_imax_main.c\nT\tbenchmarks/vec-rsort/dataset1.h\nT\tbenchmarks/vec-rsort/dataset2.h\nT\tbenchmarks/vec-spmv/dataset1.h\nT\tbenchmarks/vec-spmv/dataset2.h",
+          "path": "."
+        }
+      ],
+      "additional_files": [],
+      "name": "lab4-original"
+    },
+    {
+      "destination": "edu_cs152/lab5",
+      "archive": "lab5.tar.gz",
+      "bytes": 35973088,
+      "sha256": "0d2cd86e7330be9cf8308fcd16c80869272fe788308e3f772c4e9db2bf5e7f78",
+      "repositories": [
+        {
+          "commit": "13b587c2f06b5e8193eb1850dcdc985f4ac0848c",
+          "origin": "",
+          "tags": [],
+          "working_changes": "M\tlab/.gitignore\nM\tlab/Makefile\nT\tlab/mt-matmul-opt/dataset.h\nT\tlab/mt-matmul-opt/mt-matmul_main.c\nT\tlab/mt-vvadd-opt/dataset.h\nT\tlab/mt-vvadd-opt/mt-vvadd_main.c\nD\ttests/htif.ld",
+          "path": "."
+        },
+        {
+          "commit": "621201b1d5a929ab0e89f1a857b76a33e7e2e8a8",
+          "origin": "https://github.com/ucb-bar/ariane-wrapper.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/ariane"
+        },
+        {
+          "commit": "90911dde1b8730f10c958d172f26f72d718be5ae",
+          "origin": "https://github.com/riscv-boom/riscv-boom.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/boom"
+        },
+        {
+          "commit": "d6f36d37d1e10b7fd514e6680b1eaea032cee628",
+          "origin": "https://github.com/ucb-bar/gemmini",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/gemmini"
+        },
+        {
+          "commit": "2706502daf862c9a7a39126eb7e7209eaf984f76",
+          "origin": "https://github.com/ucb-bar/hwacha.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/hwacha"
+        },
+        {
+          "commit": "4522a3979be092c4221f186bdd93bf330fdca134",
+          "origin": "https://github.com/firesim/icenet.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/icenet"
+        },
+        {
+          "commit": "a79fdb699bab73aab618e443024175d2fea57b7b",
+          "origin": "https://github.com/firesim/rocket-chip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip"
+        },
+        {
+          "commit": "d619ca850846d2ec36da64bf8a28e7d9a3d9ed1b",
+          "origin": "https://github.com/chipsalliance/api-config-chipsalliance.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/api-config-chipsalliance"
+        },
+        {
+          "commit": "22ebeb54301ca85fa087180596d21fa56335fdbc",
+          "origin": "https://github.com/ucb-bar/berkeley-hardfloat.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/rocket-chip/hardfloat"
+        },
+        {
+          "commit": "cec8db9d6b3a602771cae63eaf6705baa3492f6a",
+          "origin": "https://github.com/ucb-bar/sha3.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sha3"
+        },
+        {
+          "commit": "3e35a94d46d88506d5b14b2c34f05b8651844452",
+          "origin": "https://github.com/sifive/sifive-blocks.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-blocks"
+        },
+        {
+          "commit": "d3d95ece5a570b423892bede4fed6cb0030c7701",
+          "origin": "https://github.com/sifive/block-inclusivecache-sifive.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/sifive-cache"
+        },
+        {
+          "commit": "b8d6f2101947e9f80f896dbaa5802946e2a3b9f0",
+          "origin": "https://github.com/ucb-bar/testchipip.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "generators/testchipip"
+        },
+        {
+          "commit": "f82e115c6641c5fe33f756abeb8093f64b0d0a80",
+          "origin": "https://github.com/firesim/firesim.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "sims/firesim"
+        },
+        {
+          "commit": "2ec7965b2ee051aaff03d5db21c6709aea4dd24e",
+          "origin": "https://github.com/firesim/DRAMSim2.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/DRAMSim2"
+        },
+        {
+          "commit": "e230e8cf3f7c0bc3c958cab22c5d90d195ca6b01",
+          "origin": "https://github.com/ucb-bar/barstools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools"
+        },
+        {
+          "commit": "4281e8f621decc10a8cdb878c593e46115c70998",
+          "origin": "https://github.com/ucb-bar/plsi-mdf.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/barstools/mdf"
+        },
+        {
+          "commit": "f410c59316e5c43bac96411889aba8c5ab9a8fc0",
+          "origin": "https://github.com/freechipsproject/chisel-testers.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/chisel-testers"
+        },
+        {
+          "commit": "7a343dce95a370f6cb7b9cf80e0694ac82dc94f8",
+          "origin": "https://github.com/freechipsproject/chisel3.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/chisel3"
+        },
+        {
+          "commit": "15145ab6230f869676de7eb730b4267fff7b11e8",
+          "origin": "https://github.com/ucb-bar/dsptools.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/dsptools"
+        },
+        {
+          "commit": "eb637777e3c4d77435cfd13358c521ed1b766ba8",
+          "origin": "https://github.com/freechipsproject/firrtl",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/firrtl"
+        },
+        {
+          "commit": "a881c07df6bceea462dbbd9a28e25721a1e88567",
+          "origin": "https://github.com/freechipsproject/firrtl-interpreter.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/firrtl-interpreter"
+        },
+        {
+          "commit": "a03b969af104770a7662ecdbac80cebf622e674b",
+          "origin": "https://github.com/freechipsproject/treadle.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "tools/treadle"
+        }
+      ],
+      "additional_files": [
+        "lab/common/nharts.c"
+      ],
+      "name": "lab5"
+    },
+    {
+      "destination": "chipyard/toolchains/riscv-tools/riscv-tests",
+      "archive": "rv32-reference.tar.gz",
+      "bytes": 754626,
+      "sha256": "b547c95c5e26eace0f9339a3ff90bb9fa285dc8b6e1a581aa3ca5c74b214e5e1",
+      "repositories": [
+        {
+          "commit": "a6ab6ae6008ffc2ea907ea9f6d2b8379583e7d56",
+          "origin": "https://github.com/riscv-software-src/riscv-tests.git",
+          "tags": [],
+          "working_changes": "",
+          "path": "."
+        }
+      ],
+      "additional_files": [],
+      "name": "rv32-reference"
+    }
+  ]
+}

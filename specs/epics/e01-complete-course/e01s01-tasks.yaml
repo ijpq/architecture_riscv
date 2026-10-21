@@ -1,0 +1,23 @@
+story: e01s01
+status: in_progress
+tasks:
+  - id: snapshot-roundtrip
+    status: completed
+    description: Pack working sources plus minimal pinned Git metadata; restore a fresh build tree
+    verify: python3 -m unittest discover -s course -p test_source_bundle.py -v
+  - id: preserve-student-work
+    status: completed
+    description: Default restore keeps nonempty existing source directories
+    verify: python3 -m unittest discover -s course -p test_source_bundle.py -v
+  - id: reject-unsafe-snapshots
+    status: completed
+    description: Reject hash errors and unsafe archive paths or links before touching destinations
+    verify: python3 -m unittest discover -s course -p test_source_bundle.py -v
+  - id: real-source-export
+    status: completed
+    description: Export all five course source trees and RV32 reference benchmark sources
+    verify: python3 course/source_bundle.py check
+  - id: isolated-checkout
+    status: in_progress
+    description: Restore committed branch into isolation and verify actual build entry points
+    verify: See specs/COURSE_BRANCH_PLAN.md section D and final verification report

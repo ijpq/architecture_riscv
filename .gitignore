@@ -1,1 +1,13 @@
 ./conda/*
+ARCHIVED
+
+# Local build logs, downloaded sources, and recovery toolchains.
+/.local/
+
+# Restored from committed, hash-checked course source archives.
+/chipyard-cs152-sp23/
+/edu_cs152/
+
+# Python bytecode is a local build result, not course material.
+__pycache__/
+*.py[cod]

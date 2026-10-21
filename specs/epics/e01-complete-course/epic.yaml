@@ -1,0 +1,14 @@
+id: e01
+name: Complete local CS152 learning branch
+status: in_progress
+scope: specs/COURSE_BRANCH_PLAN.md
+stories:
+  - id: e01s01
+    name: Restore pinned source snapshots without losing student work
+    tasks: e01s01-tasks.yaml
+constraints:
+  - No delegation or remote push
+  - Preserve unrelated dirty files and NAS links
+  - No student solutions or Mystery decompilation
+  - No Conda, caches, simulator builds, credentials or full Git history
+  - Modern Lab4 remains explicitly different from original timing Spike

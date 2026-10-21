@@ -1,0 +1,745 @@
+{
+  "schema_version": 2,
+  "checked_at": "2026-10-21T06:49:46.194044+00:00",
+  "project": "/home/tangke/cs152",
+  "overall_status": "ready_with_modern_lab4",
+  "selected_lab4_route": "modern",
+  "all_labs_ready": true,
+  "all_original_labs_ready": false,
+  "original_course_equivalent": false,
+  "required_rtl_checks_passed": 21,
+  "required_modern_lab4_checks_passed": 11,
+  "required_checks_passed": 32,
+  "required_checks_total": 32,
+  "labs": {
+    "lab1": {
+      "status": "ready",
+      "passed": 6,
+      "required": 6,
+      "checks": [
+        {
+          "config": "Sodor1StageConfig",
+          "program": "towers",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-towers-run.json",
+          "evidence_sha256": "61741011e837acca77eb06f0f0093c02856d8a54e5b05b43f81777b4ee106f84"
+        },
+        {
+          "config": "Sodor1StageConfig",
+          "program": "mix",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-mix-run.json",
+          "evidence_sha256": "6b39ed67a70e294d8422a27fd856553740a05b9ba33768f0a02f6a0c64c9dd44"
+        },
+        {
+          "config": "Sodor3StageConfig",
+          "program": "towers",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor3StageConfig-towers-run.json",
+          "evidence_sha256": "3c774934b18f55637abbe0009dcae6d37674e34f9bce6b3390236904a07527d0"
+        },
+        {
+          "config": "Sodor3StageConfig",
+          "program": "mix",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor3StageConfig-mix-run.json",
+          "evidence_sha256": "2b5aecaf4dafe53ec1aabd0cb2c9d8f02b6e8b76688759d914474225e2c363d4"
+        },
+        {
+          "config": "Sodor5StageConfig",
+          "program": "towers",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor5StageConfig-towers-run.json",
+          "evidence_sha256": "dc2f7843946f85ed6730e0a5f288c43794f5434d59c66103e92ee4da39ad45b3"
+        },
+        {
+          "config": "Sodor5StageConfig",
+          "program": "mix",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor5StageConfig-mix-run.json",
+          "evidence_sha256": "66efe8cd26e6dbb7a2cb0086f5334a146c3c8d48ee9412c8d08a0aba1025120e"
+        }
+      ]
+    },
+    "lab2": {
+      "status": "ready",
+      "passed": 6,
+      "required": 6,
+      "checks": [
+        {
+          "config": "CS152RocketConfig",
+          "program": "transpose",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab2-CS152RocketConfig-transpose-run.json",
+          "evidence_sha256": "d7bec39e0b4a57b40662071a584f83a85d0db7ea9349ecbbbf1cb1939f199c93"
+        },
+        {
+          "config": "CS152RocketConfig",
+          "program": "bfs",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab2-CS152RocketConfig-bfs-run.json",
+          "evidence_sha256": "339cc0dcae697cbef954a98675c797349db07c65437d63b20b4d9cbea732881a"
+        },
+        {
+          "config": "CS152RocketL2Config",
+          "program": "caches",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab2-CS152RocketL2Config-caches-run.json",
+          "evidence_sha256": "5976d2c10bbd7471f851332121abf9c18a4e30529def4ba2cd98ca22a69ff292"
+        },
+        {
+          "config": "CS152RocketMysteryConfig",
+          "program": "caches",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab2-CS152RocketMysteryConfig-caches-run.json",
+          "evidence_sha256": "077d2d8fce028169ee8431a98c1dcc5a17c0a4da0cb3d4f6d085eaba428545d0"
+        },
+        {
+          "config": "CS152RocketNoPrefetchConfig",
+          "program": "bfs",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab2-CS152RocketNoPrefetchConfig-bfs-run.json",
+          "evidence_sha256": "30250ab9f1f271d77b5de5af43710c843f5b19fa9f43308de1895b80138739d5"
+        },
+        {
+          "config": "CS152RocketPrefetchConfig",
+          "program": "bfs",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab2-CS152RocketPrefetchConfig-bfs-run.json",
+          "evidence_sha256": "631d013221ca7d9a4597ae55d0d4a0f1095329fc4f8f865ea4990579d3c2bc7e"
+        }
+      ]
+    },
+    "lab3": {
+      "status": "ready",
+      "passed": 4,
+      "required": 4,
+      "checks": [
+        {
+          "config": "CS152BaselineBoomConfig",
+          "program": "boom-runtime",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab3-CS152BaselineBoomConfig-boom-runtime-run.json",
+          "evidence_sha256": "65c313ae8b715349081f6dc8f70fa0e6e895c0b6dd172187d9dd7fff0b2327b5"
+        },
+        {
+          "config": "CS152SWPredBoomConfig",
+          "program": "boom-runtime",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab3-CS152SWPredBoomConfig-boom-runtime-run.json",
+          "evidence_sha256": "222a2bca8689646682a86234588bbc05d8b99d509b664617eef081576e038908"
+        },
+        {
+          "config": "CS152SmallBoomConfig",
+          "program": "boom-runtime",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab3-CS152SmallBoomConfig-boom-runtime-run.json",
+          "evidence_sha256": "c04b67407b79363a817da6cbe1c2e130a1ce8bc446349a6c614dd6de0f0ac35c"
+        },
+        {
+          "config": "CS152SmallBoomConfig",
+          "program": "pk-victim",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab3-CS152SmallBoomConfig-pk-victim-run.json",
+          "evidence_sha256": "9fa5d758d19f7038a9ab7f5a3b14d4c9dc28f9206f06f240445d6dfbbdb696ad"
+        }
+      ]
+    },
+    "lab4": {
+      "status": "ready_modern_replacement",
+      "selected_route": "modern",
+      "original_course_equivalent": false,
+      "passed": 11,
+      "required": 11,
+      "checks": [
+        {
+          "program": "csaxpy",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 119280,
+            "instructions": 79938,
+            "dcache_misses": 8820
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-csaxpy-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "69ea060e85fabdc90feb4373759705fbafb7c378e4f03b7dcd0030d9a825534b"
+        },
+        {
+          "program": "cmplxmult",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 148939,
+            "instructions": 160025,
+            "dcache_misses": 60005
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-cmplxmult-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "559355effeca45d6a6f2c73737aca3f426203086760d567b8ae2db99f60f4163"
+        },
+        {
+          "program": "dgemv",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 31043,
+            "instructions": 30525,
+            "dcache_misses": 5106
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-dgemv-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "4a9a6a18b1e768a42f706ccf1a6336c531013324a03ab8de7908ff06ae38a916"
+        },
+        {
+          "program": "dgemm",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 113642,
+            "instructions": 273718,
+            "dcache_misses": 1612
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-dgemm-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "863c0222d0f62410ddc852f12db5fe1e65789a502f14d18f7c38ee3d07dc9137"
+        },
+        {
+          "program": "imax",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 63175,
+            "instructions": 80038,
+            "dcache_misses": 8092
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-imax-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "3d00b5a47f5c2d540fd51abc2e04d0662af764da4801b125a3d70edcfcec294f"
+        },
+        {
+          "program": "spmv",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 82976,
+            "instructions": 97710,
+            "dcache_misses": 16243
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-spmv-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "6963b51a75f28e404160404fbc98cfeef423ba4f86f99fe97c778e0ad8004608"
+        },
+        {
+          "program": "rsort",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 111146,
+            "instructions": 223801,
+            "dcache_misses": 689
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-rsort-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "c44f549addb957112f9b3cd11103a5dc6c75c5a3d24bd3a36899f01f6154b35a"
+        },
+        {
+          "program": "vec-csaxpy",
+          "model": {
+            "vlen": 256,
+            "vector_latency": 4,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 17376,
+            "instructions": 2222,
+            "dcache_misses": 3687
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-vec-csaxpy-v256-lat4-u2-mem50.json",
+          "evidence_sha256": "a5b3ee99ed3a0ccc4693198c9d63316192d4d34404fefa43156d09e8ae9f04ac"
+        },
+        {
+          "program": "rvv-runtime",
+          "model": {
+            "vlen": 128,
+            "vector_latency": 1,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 598,
+            "instructions": 149
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-rvv-runtime-v128-lat1-u2-mem50.json",
+          "evidence_sha256": "91cbedeb69de5c84593debd209c23c33534df76fd7d5a82af27f04f4d8b0755d"
+        },
+        {
+          "program": "rvv-runtime",
+          "model": {
+            "vlen": 512,
+            "vector_latency": 1,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 598,
+            "instructions": 149
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-rvv-runtime-v512-lat1-u2-mem50.json",
+          "evidence_sha256": "d93eda503a34cb23f8a32572f1e142438875ad03390d169c2d119f5bd1d0763e"
+        },
+        {
+          "program": "rvv-runtime",
+          "model": {
+            "vlen": 128,
+            "vector_latency": 8,
+            "vector_units": 2,
+            "memory_latency_ns": 50
+          },
+          "passed": true,
+          "stats": {
+            "cycles": 1069,
+            "instructions": 149
+          },
+          "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-rvv-runtime-v128-lat8-u2-mem50.json",
+          "evidence_sha256": "7d8d70a8a19c92420e0d87b58deec2d6e8d954e1bda1ac60c70288f5b9c8d29b"
+        }
+      ],
+      "timing_sensitivity": {
+        "latency_1_cycles": 598,
+        "latency_8_cycles": 1069,
+        "passed": true
+      },
+      "original": {
+        "status": "blocked",
+        "reason": "RVV 0.10 compiler and course-specific timing Spike package unavailable"
+      }
+    },
+    "lab5": {
+      "status": "ready",
+      "passed": 5,
+      "required": 5,
+      "checks": [
+        {
+          "config": "Lab5RocketConfig",
+          "program": "mt-vvadd-naive",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab5-Lab5RocketConfig-mt-vvadd-naive-run.json",
+          "evidence_sha256": "35cd0ad8fb53093faa4bea0fa6461b3a65f3e49b475b592a58d084b7bc54c5e9"
+        },
+        {
+          "config": "Lab5MESIDualRocketConfig",
+          "program": "mt-vvadd-naive",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab5-Lab5MESIDualRocketConfig-mt-vvadd-naive-run.json",
+          "evidence_sha256": "8f23943d3b0f27c162df30854737ad1c384175ac1aea4363b879e381abc4fd52"
+        },
+        {
+          "config": "Lab5MSIDualRocketConfig",
+          "program": "mt-vvadd-naive",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab5-Lab5MSIDualRocketConfig-mt-vvadd-naive-run.json",
+          "evidence_sha256": "2af29c8dc7ea7b5b541aaecab4ce7c663271f79a30ffd54e3efb5f1fc4b870ad"
+        },
+        {
+          "config": "Lab5MIDualRocketConfig",
+          "program": "mt-vvadd-naive",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab5-Lab5MIDualRocketConfig-mt-vvadd-naive-run.json",
+          "evidence_sha256": "cdb0bec4527feddd8a91a99f7a008794123b485a9cf26d4fec92faaaa4058b6b"
+        },
+        {
+          "config": "Lab5MESIDualRocketConfig",
+          "program": "mt-matmul-naive",
+          "passed": true,
+          "reason": "verified",
+          "evidence": "/home/tangke/cs152/.local/evidence/lab5-Lab5MESIDualRocketConfig-mt-matmul-naive-run.json",
+          "evidence_sha256": "2d496052ad23624cd905f05d638953e481708915301f6094e05b87260ebcd31d"
+        }
+      ]
+    }
+  },
+  "additional_source_built_lab1_benchmarks": [
+    {
+      "program": "median",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-median-run.json",
+      "evidence_sha256": "2071a178c50deb25eb4c7d6a55a52cea46a48430d76ecdbfbedb62cdb1a167fd"
+    },
+    {
+      "program": "qsort",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-qsort-run.json",
+      "evidence_sha256": "5a2b2fdd732cc58f17e8b68b98b62826526a0862d0fdd460dafffc98bfd86ff2"
+    },
+    {
+      "program": "rsort",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-rsort-run.json",
+      "evidence_sha256": "d1b41fb399c2b6a0daeca41a7edef968ca42c2ea751b7b949c154524c43e249e"
+    },
+    {
+      "program": "towers",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-towers-run.json",
+      "evidence_sha256": "61741011e837acca77eb06f0f0093c02856d8a54e5b05b43f81777b4ee106f84"
+    },
+    {
+      "program": "vvadd",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-vvadd-run.json",
+      "evidence_sha256": "3df74be80b93158e696237a487eb13c246544ed90dd4591d30e2b86ecaad191a"
+    },
+    {
+      "program": "multiply",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-multiply-run.json",
+      "evidence_sha256": "b445e335d0223d99178981119326dae98975a565676c232c4d4eff1b5f620146"
+    },
+    {
+      "program": "dhrystone",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-dhrystone-run.json",
+      "evidence_sha256": "3fa308438bd0437bff10ff53d72a4f789b09e3669cebedcc883013885953dcfe"
+    },
+    {
+      "program": "spmv",
+      "config": "Sodor1StageConfig",
+      "passed": true,
+      "evidence": "/home/tangke/cs152/.local/evidence/lab1-Sodor1StageConfig-spmv-run.json",
+      "evidence_sha256": "4cdfd703d7361e9b35e1d193846d10f1b9ec66231f9c26af4091f598adbeff50"
+    }
+  ],
+  "additional_modern_lab4_checks": [
+    {
+      "program": "vec-csaxpy",
+      "model": {
+        "vlen": 128,
+        "vector_latency": 4,
+        "vector_units": 2,
+        "memory_latency_ns": 50
+      },
+      "passed": true,
+      "stats": {
+        "cycles": 31822,
+        "instructions": 4406,
+        "dcache_misses": 5236
+      },
+      "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-vec-csaxpy-v128-lat4-u2-mem50.json",
+      "evidence_sha256": "480aa6050790ae06123dd3553279b625a1260753b9546640a9d2dc82a3cad239"
+    },
+    {
+      "program": "vec-csaxpy",
+      "model": {
+        "vlen": 512,
+        "vector_latency": 4,
+        "vector_units": 2,
+        "memory_latency_ns": 50
+      },
+      "passed": true,
+      "stats": {
+        "cycles": 10238,
+        "instructions": 1130,
+        "dcache_misses": 2689
+      },
+      "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-vec-csaxpy-v512-lat4-u2-mem50.json",
+      "evidence_sha256": "ef1732ce5fcd8cab49593287a1daca27e989b57d9542268a7054eb564a31d82b"
+    },
+    {
+      "program": "vec-csaxpy",
+      "model": {
+        "vlen": 1024,
+        "vector_latency": 4,
+        "vector_units": 2,
+        "memory_latency_ns": 50
+      },
+      "passed": true,
+      "stats": {
+        "cycles": 8138,
+        "instructions": 584,
+        "dcache_misses": 1941
+      },
+      "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-vec-csaxpy-v1024-lat4-u2-mem50.json",
+      "evidence_sha256": "48fefb74c38cdb5b9885d76336d1862969c3a2415b7ceac3aca5b1ed8f893246"
+    },
+    {
+      "program": "rvv-runtime",
+      "model": {
+        "vlen": 1024,
+        "vector_latency": 8,
+        "vector_units": 1,
+        "memory_latency_ns": 80
+      },
+      "passed": true,
+      "stats": {
+        "cycles": 1070,
+        "instructions": 149
+      },
+      "evidence": "/home/tangke/cs152/.local/evidence/lab4-modern-rvv-runtime-v1024-lat8-u1-mem80.json",
+      "evidence_sha256": "a1aa9f3cd23d0a18695d4ce115a9073ab5247c376c5a0b0aaef273980d59916c"
+    }
+  ],
+  "negative_integration_checks": [
+    {
+      "program": "rvv-runtime",
+      "passed": true,
+      "expected_guest_exit": 1,
+      "failure_marker": "CS152_LAB4_CHECK_FAIL code=2",
+      "success_evidence_absent": true,
+      "log": "/home/tangke/cs152/.local/logs/lab4-modern-revocation-failed.log",
+      "log_sha256": "3dd6cd2836d89b128ab0d3b2b6a782c86e07ec6db8687f2d8abe10433fed383e",
+      "summary": "/home/tangke/cs152/.local/runs/lab4-modern/rvv-runtime/v256-lat4-u2-mem50/summary.json",
+      "summary_sha256": "4cca076af049dceecfd2331d259394ecc85cea252fc428dedaf89b3e91782ca7"
+    },
+    {
+      "program": "vec-cmplxmult",
+      "passed": true,
+      "expected_guest_exit": 1,
+      "failure_marker": "CS152_LAB4_CHECK_FAIL code=1",
+      "success_evidence_absent": true,
+      "log": "/home/tangke/cs152/.local/logs/lab4-modern-unfinished-exercise.log",
+      "log_sha256": "43515d5928bc67bfa5dc809c0de0510f9616d5e7daeaea86e4c5052c1e2a64f7",
+      "summary": "/home/tangke/cs152/.local/runs/lab4-modern/vec-cmplxmult/v256-lat4-u2-mem50/summary.json",
+      "summary_sha256": "46780355234b822f25a872a3b31c16edfd21a4492b49c039003e6bde83f1c885"
+    },
+    {
+      "program": "fail-256",
+      "passed": true,
+      "expected_guest_exit": 1,
+      "failure_marker": "CS152_LAB4_CHECK_FAIL code=256",
+      "success_evidence_absent": true,
+      "log": "/home/tangke/cs152/.local/logs/lab4-modern-fail-256.log",
+      "log_sha256": "05bdb650e179fc9862d757b53cb2c2db44d57d294c57b83fed2544f57036f237",
+      "summary": "/home/tangke/cs152/.local/runs/lab4-modern/fail-256/v256-lat4-u2-mem50/summary.json",
+      "summary_sha256": "db717eb086eb524dce16072c1997357c56035701725057a7da58bdf173bfc512"
+    }
+  ],
+  "tooling_tests": {
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "scripts/cs152-local",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/home/tangke/cs152/.local/logs/local-tooling-tests.log",
+    "log_sha256": "f4ced70a07903ead036d86fa6790dc0c0912d1cacce48f73bc87435958efbfd3",
+    "passed_tests": 51
+  },
+  "python_syntax": {
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "py_compile",
+      "/home/tangke/cs152/scripts/cs152-local/cli.py",
+      "/home/tangke/cs152/scripts/cs152-local/fetch-artifacts.py",
+      "/home/tangke/cs152/scripts/cs152-local/fetch-submodules.py",
+      "/home/tangke/cs152/scripts/cs152-local/lab4_modern.py",
+      "/home/tangke/cs152/scripts/cs152-local/plot-caches.py",
+      "/home/tangke/cs152/scripts/cs152-local/restore-links.py",
+      "/home/tangke/cs152/scripts/cs152-local/test_cli.py",
+      "/home/tangke/cs152/scripts/cs152-local/test_lab4_modern.py",
+      "/home/tangke/cs152/scripts/cs152-local/test_plot_caches.py",
+      "/home/tangke/cs152/lab4-modern/gem5_config.py"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/home/tangke/cs152/.local/logs/local-python-syntax.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "shell_syntax": {
+    "command": [
+      "bash",
+      "-n",
+      "scripts/cs152-local/env.sh",
+      "scripts/cs152-local/sbt",
+      "scripts/cs152-local/cs152"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/home/tangke/cs152/.local/logs/local-shell-syntax.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "patch_whitespace": {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "log": "/home/tangke/cs152/.local/logs/local-diff-check.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "doctor_results": {
+    "lab1": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "doctor",
+        "lab1"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "/home/tangke/cs152/.local/logs/doctor-lab1.log",
+      "log_sha256": "de262aafa1c8e4881dd0f3a0dc92f1c676f26374e1f008f7560fd17201c11992"
+    },
+    "lab2": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "doctor",
+        "lab2"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "/home/tangke/cs152/.local/logs/doctor-lab2.log",
+      "log_sha256": "200607619be762bbd8721fe3616580a7353d81ebb96917bd1a1dbbd6e3804f08"
+    },
+    "lab3": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "doctor",
+        "lab3"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "/home/tangke/cs152/.local/logs/doctor-lab3.log",
+      "log_sha256": "f0b586a0bd72a7bcfb4d492641ddc91339178ca63b66682715126b3f000c8075"
+    },
+    "lab5": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "doctor",
+        "lab5"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "/home/tangke/cs152/.local/logs/doctor-lab5.log",
+      "log_sha256": "5a9e98891d80a136b8a5bf656a7c8155aaeca7ee046d736f9d9d5c97edf2db9a"
+    },
+    "lab4-modern": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "lab4-modern",
+        "doctor"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "/home/tangke/cs152/.local/logs/doctor-lab4-modern.log",
+      "log_sha256": "342b3db624c20d2ff1621178317791a74e6ef6cd5b0bf721ecfa109c4153645e"
+    },
+    "all-modern": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "doctor",
+        "all",
+        "--lab4",
+        "modern"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "log": "/home/tangke/cs152/.local/logs/doctor-all-modern.log",
+      "log_sha256": "e37632e1e2b40bce0df887c4d6c40e3f782a1268d0f0d433f7c29070f3d8de14"
+    },
+    "all-original": {
+      "command": [
+        "/home/tangke/cs152/scripts/cs152-local/cs152",
+        "doctor",
+        "all"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "log": "/home/tangke/cs152/.local/logs/doctor-all-original.log",
+      "log_sha256": "f4ae48f9eb74314678e01f975fb78c74b76d4d6c980c335e3aabd0e0cd9940d8"
+    }
+  },
+  "original_lab4_setup_expected_failure": {
+    "command": [
+      "/home/tangke/cs152/scripts/cs152-local/cs152",
+      "setup",
+      "lab4"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "log": "/home/tangke/cs152/.local/logs/lab4-setup-blocked.log",
+    "log_sha256": "06a36e62c8ce1a60ab71a976741dfad1a2e7eb154cf287a0bfd2d7db4f629b4e"
+  },
+  "documentation": "/home/tangke/cs152/docs/LOCAL_ENVIRONMENT.md",
+  "modern_lab4_documentation": "/home/tangke/cs152/lab4-modern/README.md",
+  "self_review": "/home/tangke/cs152/specs/verifications/LOCAL_ENVIRONMENT_AUDIT.md",
+  "limitations": [
+    "all_labs_ready refers only to the explicitly selected modern Lab4 route",
+    "Original RVV 0.10 course toolchain remains unavailable",
+    "Modern gem5 RVV 1.0 is not a physical lane/chaining or legacy DLEN model",
+    "Not all large workload/parameter combinations were run",
+    "Student solutions were not implemented; unfinished exercises are expected to fail",
+    "GAPBS times are rdcycle normalized at 1 GHz, not host seconds",
+    "Optional SPEC CPU2006 needs a lawful license; private course services are not provided",
+    "Legacy RTL fingerprint checks do not detect all source edits; rebuild after editing",
+    "Self-review only; no independent reviewer or complete static type/style gate"
+  ]
+}

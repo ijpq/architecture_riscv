@@ -1,0 +1,5 @@
+# Independent, RISC-V-only classic-cache teaching build.
+BUILD_ISA=y
+USE_RISCV_ISA=y
+RUBY=n
+USE_SYSTEMC=n
