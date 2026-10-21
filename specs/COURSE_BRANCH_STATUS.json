@@ -2,9 +2,9 @@
   "schema_version": 1,
   "checked_at": "2026-10-21T14:24:38.710112+00:00",
   "status": "ready_for_self_study_with_modern_lab4",
-  "branch": "learn/cs152-complete",
+  "branch": "main",
   "verified_source_commit": "58822b31abba1c7c1bab26883b98ab004a6f2451",
-  "pushed": false,
+  "pushed": true,
   "materials": {
     "baseline": "UC Berkeley CS152 Spring 2023; explicitly marked Spring 2021 supplement",
     "mirror_commit": "454e839289773a2cb8e6c70bcf76c1906e2bac7b",
@@ -192,6 +192,39 @@
       "archive_comparison": {
         "log": ".local/logs/course-corrections-archive.json",
         "sha256": "fca1823f52f3aee59c4a553e5a39f66647b11bd4cb2829cd75876264dbd2cf8b"
+      }
+    }
+  },
+  "github_publication": {
+    "published_at": "2026-10-21T15:40:07.422898+00:00",
+    "repository": "ijpq/architecture_riscv",
+    "html_url": "https://github.com/ijpq/architecture_riscv",
+    "default_and_daily_branch": "main",
+    "course_snapshot_branch": "learn/cs152-complete",
+    "initial_sync_commit": "01174404c8909de90763f5044cba7cad3fa89a1f",
+    "request": "Consolidate the GitHub learning entry and progress after the user accepted synchronizing the complete branch.",
+    "progress_document": "PROGRESS.md",
+    "repository_map": "docs/REPOSITORIES.md",
+    "homepage_and_progress_read_back_from_github": true,
+    "retained_existing_user_edits": true,
+    "remote_repositories_deleted_or_archived": [],
+    "note": "This metadata commit follows the verified initial publication; earlier cold-build evidence remains unchanged.",
+    "evidence": {
+      "initial_push": {
+        "log": ".local/github-learning-entry/initial-push.log",
+        "sha256": "aab758c55cdf240ac441bee6ae8a42b12422e64ef449377d11500a2c864403f7"
+      },
+      "initial_remote_refs": {
+        "log": ".local/github-learning-entry/initial-remote-refs.log",
+        "sha256": "6c6060e8820b1400ba74daee0e9b6b611c9bb8ec405b8a6894db9795883d78f8"
+      },
+      "github_file_readback": {
+        "log": ".local/github-learning-entry/github-readback.json",
+        "sha256": "704eaf96dd3c21f2e8768218d0a79afb84b9a53181525b11814c89290192dc9c"
+      },
+      "staged_document_links_and_preservation": {
+        "log": ".local/github-learning-entry/readiness.log",
+        "sha256": "f3087c39457f69cf67e95bc70d77726212436713026fd894a172746eb8cd7ff0"
       }
     }
   },

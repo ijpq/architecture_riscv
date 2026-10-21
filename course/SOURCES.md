@@ -32,7 +32,7 @@ python3 course/fetch_materials.py
 ## 新检出的启动顺序
 
 ```bash
-git switch learn/cs152-complete
+git switch main
 # 不要加 --recurse-submodules，也不要在根目录执行递归 submodule update。
 python3 course/source_bundle.py restore
 python3 course/fetch_materials.py
