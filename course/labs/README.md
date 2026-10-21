@@ -1,6 +1,6 @@
 # 五个实验的本地学习入口
 
-先阅读 [环境说明](../../docs/LOCAL_ENVIRONMENT.md)。资料以 Spring 2023 为基线，能运行的源码跨年份，因此下面逐项解释映射。不要在顶层执行 `git submodule update --init --recursive`：顶层历史私有 Gitlinks 不是这份学习分支的安装入口。
+先阅读 [环境说明](../../docs/LOCAL_ENVIRONMENT.md)。资料以 Spring 2023 为基线，能运行的源码跨年份，因此下面逐项解释映射。不要在顶层执行 `git submodule update --init --recursive`：顶层历史 Gitlinks 不是这份学习分支的安装入口。
 
 | 实验 | 原题 | 本地课 | 源码/替代路线 | 学习前置 |
 |---|---|---|---|---|

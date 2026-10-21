@@ -1,10 +1,33 @@
-# CS152 自学分支
+# CS152 学习主页
 
-**从 [完整课程入口](course/README.md) 开始：讲义、HW1–5、Lab1–5、中文导读和逐步学习路线。**
+固定入口：**[ijpq/architecture_riscv](https://github.com/ijpq/architecture_riscv) 的 `main` 分支**。旧名字 `MyCS152` 会跳转到这里。
 
-- 分支：`learn/cs152-complete`。原件来源、缺口和版权见 [资料说明](course/ORIGINS.md)。
-- 新检出按 [源码恢复说明](course/SOURCES.md) 准备，不使用顶层旧私有 Gitlinks 的递归安装入口。
-- 这是跨年份的本地自学整理版；现代 Lab4 的模型限制和缺失原件均已标注，不含作业答案。
+**[学习进度](PROGRESS.md) · [完整课程资料](course/README.md) · [逐讲路线](course/ROADMAP.md) · [实验指南](course/labs/README.md)**
+
+## 目前学到哪里
+
+- **当前学习：Lab1 第二轮，个人报告记录到 §3.7。** 最近一次明确的学习提交为 2025-07-23；见 [个人报告](lab1.report.md)。
+- **下次继续：**复核 §3.7 的数据与执行时间推导，再对照实验要求更新 [进度页](PROGRESS.md)。
+- 讲义、HW1–5 和其他实验的完成情况先标为“未登记”，按自己的学习成果逐项更新。
+
+2026-10-21 已核查本机实验环境：21 项原课程 RTL + 11 项现代 Lab4 检查通过。环境准备与个人课程进度分别记录；Lab4 使用 RVV 1.0/gem5，原版工具和模型限制见 [实验说明](lab4-modern/README.md)。
+
+## 每次学习从这里进入
+
+1. 在 [学习进度](PROGRESS.md) 找到上次停下的位置。
+2. 按 [课程入口](course/README.md) 打开讲义、作业或实验指南。
+3. 学习后保存自己的笔记、代码和报告，在进度页追加成果链接与下次任务，提交到 `main`。
+
+资料包括 56 份原始 PDF、中文导读、HW1–5 和五个实验的本地路线。首次检出先读 [源码恢复](course/SOURCES.md) 与 [本地环境指南](docs/LOCAL_ENVIRONMENT.md)。资料版本、缺口和来源见 [资料说明](course/ORIGINS.md)。
+
+## 其他 CS152 仓库怎么用
+
+主仓库负责学习记录；`chipyard-cs152-sp23`、`riscv-sodor` 等仓库保存底层源码或历史环境，平时不用切换过去找进度。现名、旧名和用途统一列在 [仓库导航](docs/REPOSITORIES.md)。
+
+`learn/cs152-complete` 保留本次完整课程整理的版本，日常继续使用 `main`。
+
+<details>
+<summary>历史环境与安装记录（供回查）</summary>
 
 以下是早期主要针对 Lab 1 的安装记录，保留作背景参考；不要再按其中的旧 Java 替换步骤重新配置。
 
@@ -295,5 +318,7 @@ minstret = 6172
 这个no such file的java exception，试着去在实验的chipyard目录中创建一个.java_tmp目录
 
 **以上内容，根据文档(https://inst.eecs.berkeley.edu/~cs152/sp23/assets/labs/lab1.pdf)进行配置**
+
+</details>
 
 </details>
