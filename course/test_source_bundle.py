@@ -106,6 +106,8 @@ class SourceBundleTests(unittest.TestCase):
             [("payload/device", tarfile.CHRTYPE, "")],
             [("payload/source.c", tarfile.REGTYPE, ""), ("payload/source.c", tarfile.REGTYPE, "")],
             [("payload/alias", tarfile.SYMTYPE, "directory"), ("payload/alias/file", tarfile.REGTYPE, "")],
+            [("payload/a", tarfile.SYMTYPE, "."), ("payload/b", tarfile.SYMTYPE, "a/../escape")],
+            [("payload/a", tarfile.SYMTYPE, "b"), ("payload/b", tarfile.SYMTYPE, "a")],
         ]
         for number, members in enumerate(cases):
             with self.subTest(members=members):
@@ -148,7 +150,7 @@ class SourceBundleTests(unittest.TestCase):
         git(child, "add", "Core.scala")
         git(child, "-c", "user.name=Snapshot Fixture", "-c", "user.email=fixture@example.invalid", "commit", "-qm", "fixture: nested source")
         child_head = git(child, "rev-parse", "HEAD")
-        git(self.repo, "add", "generators/core")
+        git(self.repo, "-c", "advice.addEmbeddedRepo=false", "add", "generators/core")
         git(self.repo, "-c", "user.name=Snapshot Fixture", "-c", "user.email=fixture@example.invalid", "commit", "-qm", "fixture: add source gitlink")
         self.package()
         BUNDLES.restore_bundles(self.destination, self.bundle_dir)
@@ -156,6 +158,34 @@ class SourceBundleTests(unittest.TestCase):
         self.assertEqual(git(restored, "rev-list", "--count", "HEAD"), "1")
         self.assertEqual(git(restored / "generators/core", "rev-parse", "HEAD"), child_head)
         self.assertEqual((restored / "generators/core/Core.scala").read_text(), "class FixtureCore\n")
+
+    def test_private_git_config_hooks_and_credentials_do_not_enter_snapshot(self):
+        git(self.repo, "config", "remote.origin.url", "https://fixture-secret@github.com/example/fixture.git")
+        git(self.repo, "config", "core.sshCommand", "must-not-copy-this-command")
+        (self.repo / ".git/hooks/private-hook").write_text("private hook, never distribute")
+        self.package()
+        BUNDLES.restore_bundles(self.destination, self.bundle_dir)
+        metadata = self.destination / "fixture/.git"
+        self.assertFalse((metadata / "hooks").exists())
+        self.assertFalse((metadata / "logs").exists())
+        self.assertNotIn("fixture-secret", (metadata / "config").read_text())
+        self.assertNotIn("must-not-copy", (metadata / "config").read_text())
+
+    def test_existing_archive_is_not_replaced_by_repacking(self):
+        manifest = self.package()
+        archive = self.bundle_dir / manifest["bundles"][0]["archive"]
+        before = archive.read_bytes()
+        with self.assertRaisesRegex(ValueError, "Refuse to replace"):
+            self.package()
+        self.assertEqual(archive.read_bytes(), before)
+
+    def test_pack_refuses_a_dangling_archive_symlink(self):
+        self.bundle_dir.mkdir()
+        outside = self.base / "must-not-create.tar.gz"
+        (self.bundle_dir / "lab1.tar.gz").symlink_to(outside)
+        with self.assertRaisesRegex(ValueError, "Refuse to replace"):
+            self.package()
+        self.assertFalse(outside.exists())
 
 
 if __name__ == "__main__":
