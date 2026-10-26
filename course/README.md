@@ -2,7 +2,7 @@
 
 这份学习分支以 **UC Berkeley CS152 Spring 2023** 为主，整理原讲义、五份作业、五个实验、讨论题和试卷，并提供中文导读及经过本机验收的实验路线。它是自学整理版，不是 Berkeley 官方发布或当前学期课程。
 
-日常先看 **[个人学习进度](../PROGRESS.md)**；这里是课程资料入口。GitHub 固定打开主仓库 `architecture_riscv` 的 `main`，其他仓库的用途见 [仓库导航](../docs/REPOSITORIES.md)。
+日常先看 **[个人学习进度](../PROGRESS.md)** 和 [本轮学习笔记](../notes/CS152.md)；这里是课程资料入口。GitHub 固定打开主仓库 `architecture_riscv` 的 `main`，其他仓库的用途见 [仓库导航](../docs/REPOSITORIES.md)。
 
 ## 从哪里开始
 
@@ -15,7 +15,7 @@
 
 | 阶段 | 讲义主题 | 书面与动手 |
 |---|---|---|
-| 1 | L01–L03：性能、ISA、微码 | HW1 对应题；理解 datapath 与控制 |
+| 1 | L01–L03：课程背景、ISA、数据通路与微码 | HW1 对应题；理解 datapath 与控制；性能公式另作补充复习 |
 | 2 | L04–L05：流水线 | 完成 HW1；Lab1 的 1/3/5 级比较 |
 | 3 | L06–L10：cache、内存、地址转换 | HW2；Lab2 转置、缓存扫描、Mystery 和预取 |
 | 4 | L11–L13：乱序、重命名、异常 | HW3 的调度、寄存器和访存题；Lab3 基线 |

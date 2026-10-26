@@ -13,9 +13,9 @@
 
 | 原讲次 | 本地原件 / 替代材料 | 核心学习目标 | 建议实践 |
 |---|---|---|---|
-| L01 | [Intro](originals/sp23/lectures/L01-Intro.pdf) | ISA 与微体系结构；CPI 与性能方程 | 建立实验报告与基线 |
-| L02 | [Simple implementations](originals/sp23/lectures/L02-SimpleImps.pdf) | 单周期、多周期的状态与关键路径 | Lab1，画数据通路 |
-| L03 | [Microcoding / pipelining](originals/sp23/lectures/L03-Microcoding-Pipelining.pdf) | 微指令与状态转移；流水线切分 | HW1、Lab1 |
+| L01 | [Intro](originals/sp23/lectures/L01-Intro.pdf) | 课程介绍、技术与历史背景；ISA 抽象和兼容产品族 | 区分 ISA 与微架构；性能公式作为补充复习 |
+| L02 | [Simple implementations](originals/sp23/lectures/L02-SimpleImps.pdf) | ISA 契约、控制与数据通路、单总线微码 RISC-V | 画出 MA:=PC 与取指步骤的数据流和控制信号 |
+| L03 | [Microcoding / pipelining](originals/sp23/lectures/L03-Microcoding-Pipelining.pdf) | 微码 ROM、控制存储编码、微程序组织与 RISC 设计取舍 | HW1 微码相关题；标准流水线从 L04 继续 |
 | L04 | [Pipelining](originals/sp23/lectures/L04-Pipelining.pdf) | 数据相关、停顿与旁路 | HW1、Lab1 |
 | L05 | [Pipelining II](originals/sp23/lectures/L05-PipeliningII.pdf) | 控制冒险、吞吐量与延迟 | HW1、Lab1 |
 | L06 | [Memory](originals/sp23/lectures/L06-Memory.pdf) | 局部性、cache 结构与 AMAT | HW2、Lab2 open1 |

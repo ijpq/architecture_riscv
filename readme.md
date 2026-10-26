@@ -2,13 +2,13 @@
 
 固定入口：**[ijpq/architecture_riscv](https://github.com/ijpq/architecture_riscv) 的 `main` 分支**。旧名字 `MyCS152` 会跳转到这里。
 
-**[学习进度](PROGRESS.md) · [完整课程资料](course/README.md) · [逐讲路线](course/ROADMAP.md) · [实验指南](course/labs/README.md)**
+**[学习进度](PROGRESS.md) · [仓库笔记](notes/CS152.md) · [Notion 笔记](https://app.notion.com/p/4056a691a12d814ebc07c97c6ff28576) · [完整课程资料](course/README.md) · [实验指南](course/labs/README.md)**
 
 ## 目前学到哪里
 
-- **当前学习：Lab1 第二轮，个人报告记录到 §3.7。** 最近一次明确的学习提交为 2025-07-23；见 [个人报告](lab1.report.md)。
-- **下次继续：**复核 §3.7 的数据与执行时间推导，再对照实验要求更新 [进度页](PROGRESS.md)。
-- 讲义、HW1–5 和其他实验的完成情况先标为“未登记”，按自己的学习成果逐项更新。
+- **当前学习：从头重学，已讨论 L01，正在学习 L02 第 25 页的微码取指。** 最新记录见 [学习笔记](notes/CS152.md)。
+- **下次继续：**独立复述 `MA,A := PC` 的数据流，再确认 `PC := A+4`、Busy 等待与 IR 装入。
+- 旧的 [Lab1 个人报告](lab1.report.md) 记录到第二轮 §3.7，保留作复习对照；本轮作业、实验的完成情况单独登记。
 
 2026-10-21 已核查本机实验环境：21 项原课程 RTL + 11 项现代 Lab4 检查通过。环境准备与个人课程进度分别记录；Lab4 使用 RVV 1.0/gem5，原版工具和模型限制见 [实验说明](lab4-modern/README.md)。
 
@@ -17,6 +17,8 @@
 1. 在 [学习进度](PROGRESS.md) 找到上次停下的位置。
 2. 按 [课程入口](course/README.md) 打开讲义、作业或实验指南。
 3. 学习后保存自己的笔记、代码和报告，在进度页追加成果链接与下次任务，提交到 `main`。
+
+个人笔记已配置 [Notion 双向同步](docs/NOTION_SYNC.md)：单端修改自动同步，两端同时修改时保存冲突。后台同步更新工作区，Git 提交仍按学习工作流进行。
 
 资料包括 56 份原始 PDF、中文导读、HW1–5 和五个实验的本地路线。首次检出先读 [源码恢复](course/SOURCES.md) 与 [本地环境指南](docs/LOCAL_ENVIRONMENT.md)。资料版本、缺口和来源见 [资料说明](course/ORIGINS.md)。
 

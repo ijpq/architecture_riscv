@@ -11,3 +11,6 @@ ARCHIVED
 # Python bytecode is a local build result, not course material.
 __pycache__/
 *.py[cod]
+
+# Dependencies for the optional Notion note sync bridge.
+/scripts/notion-sync/node_modules/
