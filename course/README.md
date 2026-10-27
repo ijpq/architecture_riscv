@@ -7,9 +7,9 @@
 ## 从哪里开始
 
 1. 首次检出：读 [源码与本机环境恢复](SOURCES.md)。当前工作目录已恢复环境，不要覆盖自己的实验文件。
-2. 读 [课程中文导读](notes/README.md)，按 [逐讲学习路线](ROADMAP.md) 或下表边学边做，不必先把所有理论看完。
+2. 从 [逐讲详细中文导读](notes/lectures/README.md) 找重点页、掌握标准与基础自检，按 [学习路线](ROADMAP.md) 边学边做；[按主题的概念导读](notes/README.md) 留作阶段复习。
 3. 打开 [全部原件](originals/README.md)、[作业与配套手册](assignments/README.md)、[五个实验指南](labs/README.md)。
-4. 每完成一组，用 [文本自测](assignments/self-checks.md) 和 [报告模板](assignments/report-template.md) 检查理解与证据。
+4. 每讲用短自检确认基本机制，再按 [HW 逐题覆盖表](assignments/coverage.md) 开始对应小问；每完成一组，用 [综合自测](assignments/self-checks.md) 和 [报告模板](assignments/report-template.md) 查漏。选做迁移题不作为全部实践的前置门槛。
 
 ## 建议顺序（可按自己的进度延长）
 
@@ -19,8 +19,8 @@
 | 2 | L04–L05：流水线 | 完成 HW1；Lab1 的 1/3/5 级比较 |
 | 3 | L06–L10：cache、内存、地址转换 | HW2；Lab2 转置、缓存扫描、Mystery 和预取 |
 | 4 | L11–L13：乱序、重命名、异常 | HW3 的调度、寄存器和访存题；Lab3 基线 |
-| 5 | L14–L16：VLIW、预测、投机 | 完成 HW3；HW4 的 VLIW 题；Lab3 自己实现预测器 |
-| 6 | L17–L19：向量、SIMD、GPU | HW4 向量/多线程题；现代 Lab4 的标量/向量内核 |
+| 5 | L14–L16：VLIW、预测、多线程 | 完成 HW3；HW4 的 VLIW、多线程题；Lab3 自己实现预测器 |
+| 6 | L17–L19：向量、SIMD、GPU、RVV | HW4 向量时序题；GPU/RVV 补缺自检；现代 Lab4 的标量/向量内核 |
 | 7 | [系统衔接与虚拟化补课](notes/20-local-bridge.md) | 补充原讲义及文本自测，不推断官方 L20 内容 |
 | 8 | L21–L23：一致性、内存模型、同步 | HW5 + 两份协议手册；Lab5 的多核与协议对照 |
 | 9 | L24–L26：数据中心、互连、总结 | Discussion 和试卷自测；完成综合性能报告 |
@@ -44,8 +44,8 @@
 course/
   originals/             固定提交取得的原始 PDF
   materials.json         原件路径、来源、SHA-256、大小
-  notes/                 中文导读与明确标注的补课
-  assignments/           作业映射、文本自测、报告模板
+  notes/                 按主题导读、lectures/ 逐讲页码导读、明确标注的补课
+  assignments/           作业逐题覆盖、综合自测、报告模板
   labs/                  五份本地实验学习指南
   sources/               必要实验源码快照与来源清单
   source_bundle.py       不覆盖现有源码的恢复器

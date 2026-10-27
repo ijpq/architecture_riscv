@@ -4,6 +4,8 @@
 
 **[学习进度](PROGRESS.md) · [仓库笔记](notes/CS152.md) · [Notion 笔记](https://app.notion.com/p/4056a691a12d814ebc07c97c6ff28576) · [完整课程资料](course/README.md) · [实验指南](course/labs/README.md)**
 
+逐讲学习：**[中文重点页导读与分层自检](course/notes/lectures/README.md) · [HW1–5 逐题覆盖表](course/assignments/coverage.md) · [当前 L02 导读](course/notes/lectures/L02.md)**。
+
 ## 目前学到哪里
 
 - **当前学习：从头重学，已讨论 L01，正在学习 L02 第 25 页的微码取指。** 最新记录见 [学习笔记](notes/CS152.md)。

@@ -4,6 +4,8 @@
 
 不要直接按历史截止日期和服务器路径操作；实验命令见 [本地实验说明](../labs/README.md)。
 
+重点页和掌握标准见 [逐讲中文导读](../notes/lectures/README.md)，原题题号/页序与教学缺口见 [HW 覆盖表](../assignments/coverage.md)。页码统一按 PDF 阅读器从 1 开始的页序，不依赖底角编号。
+
 ## 讲义（Spring 2023）
 
 - [L01-Intro.pdf](sp23/lectures/L01-Intro.pdf)
@@ -42,10 +44,10 @@
 
 ## 作业配套手册
 
-- [hw01-handout.pdf](sp23/handouts/hw01-handout.pdf)
-- [hw02-handout.pdf](sp23/handouts/hw02-handout.pdf)
-- [hw05-handout.pdf](sp23/handouts/hw05-handout.pdf)
-- [hw05-handout2.pdf](sp23/handouts/hw05-handout2.pdf)
+- [hw01-handout.pdf](sp23/handouts/hw01-handout.pdf)：#1，总线微码机；第 7 页含五级流水线图。
+- [hw02-handout.pdf](sp23/handouts/hw02-handout.pdf)：#2，直映/四路 cache 电路。
+- [hw05-handout.pdf](sp23/handouts/hw05-handout.pdf)：#6，目录失效协议。
+- [hw05-handout2.pdf](sp23/handouts/hw05-handout2.pdf)：#7，五状态 MBus snoopy 协议，含 owned shared。
 
 ## 实验原题
 

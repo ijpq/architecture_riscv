@@ -11,7 +11,7 @@
 **当前关注：重新开始学习，正在理解 L02 第 25 页的 Instruction Fetch 微程序。**
 
 1. 打开 [本轮学习笔记](notes/CS152.md)，复述 `MA,A := PC` 的数据流与控制信号。
-2. 对照 L02 第 23、25 页，继续确认 `PC := A+4`、Busy 等待、`IR := Mem` 和 opcode dispatch。
+2. 用 [L02 详细导读](course/notes/lectures/L02.md) 对照第 23、25 页，完成 IF 的基础自检；按 handout 的 `INC_A_4` 理解常数 4。
 3. 再继续 ALU/ALUI 与 LW 等微程序；本轮尚未将 HW1 或 Lab1 记为完成。
 
 旧的 [2025-07-23 Lab1 记录](https://github.com/ijpq/architecture_riscv/commit/b53fcf75716d0f7fa31d2f6910edc8b7b3515d2d) 和 [个人报告](lab1.report.md) 保留作历史学习证据，不作为本轮完成情况，也未重新验收整份报告。
@@ -45,6 +45,7 @@
 | 2025-07-23 | Lab1 第二轮，§3.4–§3.7 | [已有报告与测量记录](lab1.report.md) | 复核 §3.7 的推导和后续实验要求 |
 | 2026-10-26 | 从头重学，L01 与 L02 到第 25 页 IF | [ISA、微架构、微码与取指笔记](notes/CS152.md) | 独立复述 MA/A/PC 与控制信号，再继续取指和 ALU 微程序 |
 | 2026-10-27 | 讨论学习方法，技术位置仍为 L02 第 25 页 | [先建立框架、最小推演、练习检验与回查的方法](notes/CS152.md) | 手推一次取指，再继续 ALU/LW；将缺失的实现前提单独标记 |
+| 2026-10-27 | 补充学习导航，技术位置不变 | [逐讲重点页与分层自检](course/notes/lectures/README.md)、[HW 逐题覆盖](course/assignments/coverage.md) | 使用 L02 三道基础检查后进入相应微码练习，选做题按薄弱项补 |
 
 可把后续笔记放到 `work/hw01/`、`work/lab01/` 等目录，并从这里链接到实际文件。没有记录的题目保持“未登记”，不要仅根据环境通过就勾选完成。
 
