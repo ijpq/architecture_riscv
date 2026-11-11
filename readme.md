@@ -2,14 +2,14 @@
 
 固定入口：**[ijpq/architecture_riscv](https://github.com/ijpq/architecture_riscv) 的 `main` 分支**。旧名字 `MyCS152` 会跳转到这里。
 
-**[学习进度](PROGRESS.md) · [仓库笔记](notes/CS152.md) · [Notion 笔记](https://app.notion.com/p/4056a691a12d814ebc07c97c6ff28576) · [完整课程资料](course/README.md) · [实验指南](course/labs/README.md)**
+**[学习进度](PROGRESS.md) · [Notion 笔记](https://app.notion.com/p/4056a691a12d814ebc07c97c6ff28576) · [完整课程资料](course/README.md) · [实验指南](course/labs/README.md)**
 
-逐讲学习：**[中文重点页导读与分层自检](course/notes/lectures/README.md) · [HW1–5 逐题覆盖表](course/assignments/coverage.md) · [当前 L02 导读](course/notes/lectures/L02.md)**。
+逐讲学习：**[中文重点页导读与分层自检](course/notes/lectures/README.md) · [HW1–5 逐题覆盖表](course/assignments/coverage.md) · [L02 导读](course/notes/lectures/L02.md) · [L03 导读](course/notes/lectures/L03.md)**。
 
 ## 目前学到哪里
 
-- **当前实践：HW1 第一题 1.A–1.C 已尝试并讨论，正在订正 1.C 的字节数与动态访存统计。** 讲义位置仍为 L02 第 25 页；最新核对见 [学习笔记](notes/CS152.md)。
-- **下次继续：**自己回填、复算 1.A–1.C 草稿，再独立开始 1.D；讲义恢复时继续 L02 的 IF 与 ALU/LW。
+- **当前实践：已讨论 HW1 至 P5.f。** [P3 图解与异常纠错](https://app.notion.com/p/40e6a691a12d8185afc9d2f4f28d7601)补记 WAW、精确异常、interlock 与旧值恢复；[P4–5 性能推理笔记](https://app.notion.com/p/4146a691a12d81a1bd2ec57b03801878)记录 CPI、关键路径、延迟槽、访存与短编码的疑问。3.A/3.D/3.E 英文答案由助手整理，不记为独立完成。
+- **下次继续：**回填 3.B、P4/P5 的订正，明确性能分析的实现假设；2.C 的 µBr/周期表、2.B 寄存器重合与优化、1.A–1.F 旧稿订正仍待完成。详见[进度页](PROGRESS.md)。2.A/2.B 副本通过的行为模型范围见[微码测试说明](work/hw01/README.md)，不代表整份作业完成。
 - 旧的 [Lab1 个人报告](lab1.report.md) 记录到第二轮 §3.7，保留作复习对照；本轮作业、实验的完成情况单独登记。
 
 2026-10-21 已核查本机实验环境：21 项原课程 RTL + 11 项现代 Lab4 检查通过。环境准备与个人课程进度分别记录；Lab4 使用 RVV 1.0/gem5，原版工具和模型限制见 [实验说明](lab4-modern/README.md)。
@@ -18,9 +18,9 @@
 
 1. 在 [学习进度](PROGRESS.md) 找到上次停下的位置。
 2. 按 [课程入口](course/README.md) 打开讲义、作业或实验指南。
-3. 学习后保存自己的笔记、代码和报告，在进度页追加成果链接与下次任务，提交到 `main`。
+3. 学习后将个人疑问与纠错写入 Notion，作业、代码和报告留在仓库；在进度页追加成果链接与下次任务，按需提交到 `main`。
 
-个人笔记已配置 [Notion 双向同步](docs/NOTION_SYNC.md)：单端修改自动同步，两端同时修改时保存冲突。后台同步更新工作区，Git 提交仍按学习工作流进行。
+个人笔记以 Notion 正文为准，仓库只保留入口与进度。旧正文缓存已在回读验证后移除，双向定时同步已停用，见[笔记维护说明](docs/NOTION_SYNC.md)。
 
 资料包括 56 份原始 PDF、中文导读、HW1–5 和五个实验的本地路线。首次检出先读 [源码恢复](course/SOURCES.md) 与 [本地环境指南](docs/LOCAL_ENVIRONMENT.md)。资料版本、缺口和来源见 [资料说明](course/ORIGINS.md)。
 
@@ -32,6 +32,16 @@
 
 <details>
 <summary>历史环境与安装记录（供回查）</summary>
+
+# 当前本地实验环境
+
+请先阅读 **[本地环境指南](docs/LOCAL_ENVIRONMENT.md)**，使用其中的统一构建、运行和检查命令。
+
+- **按现代 Lab 4 路线，五个实验的本地环境已就绪：32/32 项核心检查通过。**
+- Lab 1、2、3、5：原源码 RTL 验收 21 项；Lab 4：独立 [RVV 1.0 + gem5 实验](lab4-modern/README.md)，验收 11 项。
+- 运行 `scripts/cs152-local/cs152 doctor all --lab4 modern` 获取这条路线的实时状态，应返回 0。
+- 原 RVV 0.10 课程工具仍缺失；默认 `doctor` 保留原路线并返回非零。现代版不等价于旧 DLEN/chaining 性能题。
+- 最近一次验收快照：[`specs/LOCAL_ENVIRONMENT_STATUS.json`](specs/LOCAL_ENVIRONMENT_STATUS.json)。
 
 以下是早期主要针对 Lab 1 的安装记录，保留作背景参考；不要再按其中的旧 Java 替换步骤重新配置。
 
